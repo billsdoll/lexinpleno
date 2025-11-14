@@ -51,7 +51,7 @@ export default function KeyHighlights() {
   return (
     <section 
       id="highlights-section"
-      className="relative min-h-screen flex items-center overflow-hidden bg-transparent"
+      className="relative min-h-screen mt-20 mb-20 flex items-center overflow-hidden bg-transparent"
     >
     
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +127,7 @@ export default function KeyHighlights() {
 
         {/* Bottom Decorative Element */}
         <div className={`mt-20 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center gap-8 px-8 py-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800">
+          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-8 py-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-linear-to-r from-amber-500 to-orange-500 flex items-center justify-center">
                 <span className="text-foreground text-xl font-bold">✓</span>
@@ -181,49 +181,3 @@ export default function KeyHighlights() {
     </section>
   )
 }
-// import { Shield, CheckCircle, Award } from "lucide-react"
-
-// export default function KeyHighlights() {
-//   const highlights = [
-//     {
-//       icon: Shield,
-//       title: "Expert Advocates",
-//       description: "Highly qualified legal professionals with decades of combined experience",
-//     },
-//     {
-//       icon: CheckCircle,
-//       title: "Case Dismissed",
-//       description: "Proven track record of successful case dismissals and favorable verdicts",
-//     },
-//     {
-//       icon: Award,
-//       title: "Court Performance",
-//       description: "Exceptional courtroom presence and persuasive legal arguments",
-//     },
-//   ]
-
-//   return (
-//     <section className="py-20 bg-gradient-to-br from-secondary/5 via-background to-accent/5">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-//           {highlights.map((highlight, index) => {
-//             const Icon = highlight.icon
-//             return (
-//               <div
-//                 key={index}
-//                 className="group p-8 bg-card rounded-lg border border-border hover:border-accent/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 animate-fade-in-up"
-//                 style={{ animationDelay: `${index * 150}ms` }}
-//               >
-//                 <div className="w-12 h-12 rounded-lg bg-accent/20 text-muted-foreground flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-muted-foreground-foreground transition-all duration-300 group-hover:scale-110">
-//                   <Icon className="w-6 h-6" />
-//                 </div>
-//                 <h3 className="text-xl font-bold text-muted-foreground mb-2">{highlight.title}</h3>
-//                 <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
-//               </div>
-//             )
-//           })}
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }

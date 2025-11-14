@@ -186,14 +186,14 @@ export default function AdvocateProfile() {
               <div className="relative aspect-3/4 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl group">
                 <Image
                   fill
-                  src="/lawyer-image.jpg"
+                  src="/sitting-lawyer-image.jpg"
                   alt="Dr. Umesh Manshore - Lead Advocate"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" />
                 
                 {/* Floating Badge */}
-                <div className="absolute top-6 right-6 p-4 bg-primary/90 backdrop-blur-xl rounded-xl border border-slate-800 shadow-xl">
+                <div className="absolute top-6 right-6 p-4 bg-transparent backdrop-blur-xl rounded-xl border border-slate-800 shadow-xl">
                   <div className="flex items-center gap-2">
                     <TrendingUp className="w-5 h-5 text-green-500" />
                     <div>

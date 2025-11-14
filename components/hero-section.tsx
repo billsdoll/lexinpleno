@@ -108,7 +108,7 @@ export default function HeroSection() {
                 <div className="aspect-3/4 bg-linear-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
                   <Image
                     fill 
-                    src="/lawyer-image.jpg"
+                    src="/sitting-lawyer-image.jpg"
                     alt="Professional Legal Team"
                     className="w-full h-full object-cover opacity-90"
                   />

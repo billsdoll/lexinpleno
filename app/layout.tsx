@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Lex in Pleno Legal Services - Expert Legal Representation",
   description:
     "Premium legal services by Dr. Umesh Manshore and associates. Expert advocates for criminal, business, family, and civil law.",
-  generator: "v0.app",
+  generator: "mohit",
   icons: {
     icon: [
       {
