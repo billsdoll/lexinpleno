@@ -82,7 +82,7 @@ export default function TeamSection() {
                 {/* <div className={`absolute inset-0 bg-gradient-to-r ${associate.gradient} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-opacity duration-500`} /> */}
                 
                 {/* Card */}
-                <div className="relative p-6 w-52 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center h-full flex flex-col">
+                <div className="relative p-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center h-full flex flex-col">
                   {/* Avatar Container */}
                   <div className="relative mb-5 mx-auto">
                     {/* Rotating Ring */}
