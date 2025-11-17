@@ -1,13 +1,13 @@
-import Header from "@/components/header";
-import HeroSection from "@/components/hero-section";
-import KeyHighlights from "@/components/key-highlights";
-import AboutSection from "@/components/about-section";
-import AdvocateProfile from "@/components/advocate-profile";
-import TeamSection from "@/components/team-section";
-// import StatsSection from "@/components/stats-section"
-import ServicesSection from "@/components/services-section";
-import ContactSection from "@/components/contact-section";
-import Footer from "@/components/footer";
+import Header from "@/components/landing-page/header";
+import HeroSection from "@/components/landing-page/hero-section";
+import KeyHighlights from "@/components/landing-page/key-highlights";
+import AboutSection from "@/components/landing-page/about-section";
+import AdvocateProfile from "@/components/landing-page/advocate-profile";
+import TeamSection from "@/components/landing-page/team-section";
+// import StatsSection from "@/components/landing-page/stats-section"
+import ServicesSection from "@/components/landing-page/services-section";
+import ContactSection from "@/components/landing-page/contact-section";
+import Footer from "@/components/landing-page/footer";
 
 export default function Home() {
   return (
