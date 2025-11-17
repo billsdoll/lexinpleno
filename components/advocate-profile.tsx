@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function AdvocateProfile() {
   const [isVisible, setIsVisible] = useState(false)
-  const [countUp, setCountUp] = useState({ cases: 0, years: 0, rate: 0 })
+  const [countUp, setCountUp] = useState({ cases: 0, cities: 0, awards: 0 })
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,9 +35,9 @@ export default function AdvocateProfile() {
         const progress = currentStep / steps
         
         setCountUp({
-          cases: Math.floor(3000 * progress),
-          years: Math.floor(25 * progress),
-          rate: Math.floor(98 * progress)
+          cases: Math.floor(10540 * progress),
+          cities: Math.floor(40 * progress),
+          awards: Math.floor(1000 * progress)
         })
 
         if (currentStep >= steps) clearInterval(timer)
@@ -51,7 +51,7 @@ export default function AdvocateProfile() {
     {
       icon: GraduationCap,
       title: "Educational Excellence",
-      description: "LL.B, LL.M, Ph.D., M.A., PGDCL",
+      description: "B.Com, LL.B, LL.M, M.Phil., Ph.D.",
       gradient: "from-amber-500 to-orange-500",
       iconBg: "bg-amber-500/10",
       delay: "0ms"
@@ -160,15 +160,15 @@ export default function AdvocateProfile() {
               </div>
               <div className="text-center p-4 rounded-xl bg-linear-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                  {countUp.years}+
+                  {countUp.cities} +
                 </p>
                 <p className="text-xs text-primary mt-1">Years Exp.</p>
               </div>
               <div className="text-center p-4 rounded-xl bg-linear-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  {countUp.rate}%
+                  {countUp.awards}+
                 </p>
-                <p className="text-xs text-primary mt-1">Success</p>
+                <p className="text-xs text-primary mt-1">Awards</p>
               </div>
             </div>
           </div>
@@ -190,15 +190,15 @@ export default function AdvocateProfile() {
                   alt="Dr. Umesh Manshore - Lead Advocate"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" />
+                {/* <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" /> */}
                 
                 {/* Floating Badge */}
                 <div className="absolute top-6 right-6 p-4 bg-transparent backdrop-blur-xl rounded-xl border border-slate-800 shadow-xl">
                   <div className="flex items-center gap-2">
                     <TrendingUp className="w-5 h-5 text-green-500" />
                     <div>
-                      <p className="text-xs text-primary">Success Rate</p>
-                      <p className="text-xl font-bold text-foreground">98%</p>
+                      <p className="text-xs text-white">Success Rate</p>
+                      <p className="text-xl font-bold text-white">98%</p>
                     </div>
                   </div>
                 </div>

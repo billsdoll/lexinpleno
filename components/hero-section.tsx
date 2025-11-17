@@ -105,14 +105,14 @@ export default function HeroSection() {
               
               {/* Main Image Container */}
               <div className="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 backdrop-blur-sm shadow-2xl">
-                <div className="aspect-3/4 bg-linear-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+                <div className="aspect-3/4 bg-linear-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 ">
                   <Image
                     fill 
                     src="/sitting-lawyer-image.jpg"
                     alt="Professional Legal Team"
                     className="w-full h-full object-cover opacity-90"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-gray-50/50 via-transparent to-transparent dark:from-slate-950" />
+                  {/* <div className="absolute inset-0 bg-linear-to-t from-gray-50/50 via-transparent to-transparent dark:from-slate-950" /> */}
                 </div>
                 
                 {/* Floating Card */}

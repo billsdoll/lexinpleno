@@ -116,7 +116,7 @@ export default function TeamSection() {
                   
                   {/* Credentials */}
                   <div className="mt-auto">
-                    <div className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-800/50 border border-slate-700">
+                    <div className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-background/50 border border-slate-700">
                       <span className="text-xs text-primary font-medium">Advocate, LL.B</span>
                     </div>
                   </div>

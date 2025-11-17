@@ -48,7 +48,7 @@ export default function ContactSection() {
     {
       icon: MapPin,
       title: "Address",
-      content: "106 Nashville Trade Centre\n934 Kamaraj Road\nOpp. Bharat Petrol Bunk\nMadurai – 625 002 (TN)",
+      content: "106 Akanksha Trade Centre 156 Kanchan Bagh Indore-452001 (M.P)",
       gradient: "from-amber-500 to-orange-500",
       bgGlow: "bg-amber-500/20"
     },

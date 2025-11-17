@@ -190,7 +190,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500">Location</p>
-                  <p className="text-sm text-slate-300">Madurai, Tamil Nadu</p>
+                  <p className="text-sm text-slate-300">106 Akanksha Trade Centre 156 Kanchan Bagh Indore-452001 (M.P)</p>
                 </div>
               </li>
             </ul>

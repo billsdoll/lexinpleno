@@ -75,7 +75,7 @@ export default function AboutSection() {
                   alt="Lady Justice Statue"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" />
+                {/* <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" /> */}
                 
                 {/* Floating Stats Card */}
                 <div className="absolute bottom-8 left-8 right-8 p-6 bg-background backdrop-blur-xl rounded-xl border border-slate-800 shadow-2xl">
@@ -86,13 +86,13 @@ export default function AboutSection() {
                     </div>
                     <div className="w-px h-12 bg-slate-700" />
                     <div>
-                      <p className="text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">3K+</p>
+                      <p className="text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">10K+</p>
                       <p className="text-sm text-primary font-medium">Cases Won</p>
                     </div>
                     <div className="w-px h-12 bg-slate-700" />
                     <div>
-                      <p className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">98%</p>
-                      <p className="text-sm text-primary font-medium">Success Rate</p>
+                      <p className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">3000+</p>
+                      <p className="text-sm text-primary font-medium">Trusted Clients</p>
                     </div>
                   </div>
                 </div>
