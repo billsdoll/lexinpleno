@@ -115,7 +115,7 @@ export default function ServicesSection() {
           </div>
 
           <h2
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-4 transition-all duration-1000 delay-100 ${
+            className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 delay-100 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -128,7 +128,7 @@ export default function ServicesSection() {
           </h2>
 
           <p
-            className={`text-lg text-primary max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
+            className={`text-lg text-white max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -162,7 +162,7 @@ export default function ServicesSection() {
                 {/* <div className={`absolute inset-0 ${service.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
 
                 {/* Card */}
-                <div className="relative h-full p-8 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                <div className="relative h-full p-8 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     {/* Icon Background Glow */}
@@ -294,71 +294,3 @@ export default function ServicesSection() {
     </section>
   );
 }
-// import { Scale, Users, Briefcase, Home, Heart, Gavel } from "lucide-react"
-
-// export default function ServicesSection() {
-//   const services = [
-//     {
-//       icon: Briefcase,
-//       title: "Business Law",
-//       description: "Expert guidance on corporate matters, contracts, and business litigation",
-//     },
-//     {
-//       icon: Users,
-//       title: "Family Law",
-//       description: "Sensitive representation in divorce, custody, and family matters",
-//     },
-//     {
-//       icon: Scale,
-//       title: "Criminal Law",
-//       description: "Aggressive defense strategies for criminal charges and prosecution",
-//     },
-//     {
-//       icon: Home,
-//       title: "Real Estate Law",
-//       description: "Comprehensive legal services for property transactions and disputes",
-//     },
-//     {
-//       icon: Heart,
-//       title: "Personal Injury",
-//       description: "Maximum compensation recovery for injuries and damages",
-//     },
-//     {
-//       icon: Gavel,
-//       title: "Judicial Law",
-//       description: "Appellate representation and complex constitutional matters",
-//     },
-//   ]
-
-//   return (
-//     <section id="services" className="py-20 bg-background">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-16 animate-fade-in-down">
-//           <h2 className="text-4xl font-bold text-primary mb-4">What We Cover</h2>
-//           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-//             Comprehensive legal services across multiple practice areas to meet all your needs
-//           </p>
-//         </div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {services.map((service, index) => {
-//             const Icon = service.icon
-//             return (
-//               <div
-//                 key={index}
-//                 className="group p-8 bg-card rounded-lg border border-border hover:border-secondary/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 animate-fade-in-up"
-//                 style={{ animationDelay: `${index * 100}ms` }}
-//               >
-//                 <div className="w-12 h-12 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-secondary-foreground transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-//                   <Icon className="w-6 h-6" />
-//                 </div>
-//                 <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
-//                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-//               </div>
-//             )
-//           })}
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }

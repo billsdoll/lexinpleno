@@ -65,13 +65,13 @@ export default function KeyHighlights() {
           </div>
           
           <h2 
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-4 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Our <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Commitment</span> to Excellence
           </h2>
           
           <p 
-            className={`text-lg text-muted-foreground max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`text-lg text-white max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Delivering exceptional legal services with integrity, expertise, and unwavering dedication
           </p>
@@ -84,14 +84,14 @@ export default function KeyHighlights() {
             return (
               <div
                 key={index}
-                className={`group relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                className={`group relative transition-all  duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                 style={{ transitionDelay: `${300 + index * 150}ms` }}
               >
                 {/* Glow Effect */}
-                <div className={`absolute inset-0 ${highlight.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                {/* <div className={`absolute inset-0 ${highlight.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
                 
                 {/* Card */}
-                <div className={`relative p-8 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800 ${highlight.hoverGlow} hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500`}>
+                <div className={`relative p-8 bg-background backdrop-blur-sm hover:scale-105 rounded-2xl ${highlight.hoverGlow} hover:shadow-xl hover:border-slate-700  hover:-translate-y-2 transition-all duration-500`}>
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     {/* Glow Icon background */}
@@ -127,7 +127,7 @@ export default function KeyHighlights() {
 
         {/* Bottom Decorative Element */}
         <div className={`mt-20 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-8 py-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800">
+          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-8 py-6 bg-background hover:scale-105 backdrop-blur-sm rounded-2xl transition-all shadow-sm duration-300 hover:shadow-lg hover:shadow-black">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-linear-to-r from-amber-500 to-orange-500 flex items-center justify-center">
                 <span className="text-foreground text-xl font-bold">✓</span>

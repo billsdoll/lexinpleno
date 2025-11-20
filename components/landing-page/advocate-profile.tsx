@@ -91,7 +91,7 @@ export default function AdvocateProfile() {
 
             {/* Heading */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">
                 Meet Our <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Distinguished</span>
               </h2>
               <h3 className="text-3xl font-bold bg-linear-to-r from-amber-400 via-amber-500 to-orange-500 bg-clip-text text-transparent">
@@ -101,12 +101,12 @@ export default function AdvocateProfile() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-amber-500 fill-amber-500" />
                 ))}
-                <span className="text-primary text-sm ml-2">5.0 Client Rating</span>
+                <span className="text-white text-sm ml-2">5.0 Client Rating</span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-white leading-relaxed">
               Dr. Umesh Manshore brings unparalleled expertise and dedication to every case. With multiple advanced degrees and a Ph.D. in Law, he stands as one of the most qualified advocates in the region.
             </p>
 
@@ -118,7 +118,7 @@ export default function AdvocateProfile() {
                 return (
                   <div 
                     key={index}
-                    className={`group relative p-5 rounded-xl bg-background/50 backdrop-blur-sm border border-slate-800 hover:border-slate-700 hover:bg-backgound transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    className={`group relative p-5 rounded-xl bg-background/80 backdrop-blur-sm border border-slate-800 hover:border-slate-700 hover:bg-backgound transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: isVisible ? item.delay : '0ms' }}
                   >
                     {/* Glow Effect */}
@@ -152,23 +152,23 @@ export default function AdvocateProfile() {
 
             {/* Stats Counter */}
             <div className="grid grid-cols-3 gap-4 pt-4">
-              <div className="text-center p-4 rounded-xl bg-linear-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20">
+              <div className="text-center p-4 rounded-xl bg-black/40 border border-amber-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
                   {countUp.cases}+
                 </p>
-                <p className="text-xs text-primary mt-1">Cases Won</p>
+                <p className="text-xs text-white mt-1">Cases Won</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-linear-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+              <div className="text-center p-4 rounded-xl bg-black/40 border border-blue-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                   {countUp.cities} +
                 </p>
-                <p className="text-xs text-primary mt-1">Years Exp.</p>
+                <p className="text-xs text-white mt-1">Years Exp.</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-linear-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+              <div className="text-center p-4 rounded-xl bg-black/40 border border-purple-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   {countUp.awards}+
                 </p>
-                <p className="text-xs text-primary mt-1">Awards</p>
+                <p className="text-xs text-white mt-1">Awards</p>
               </div>
             </div>
           </div>
@@ -252,61 +252,3 @@ export default function AdvocateProfile() {
     </section>
   )
 }
-// import { Award, GraduationCap, Briefcase } from "lucide-react"
-
-// export default function AdvocateProfile() {
-//   return (
-//     <section className="py-20 bg-secondary/10">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-//           {/* Content */}
-//           <div className="space-y-8 animate-in fade-in slide-in-from-left-4 duration-1000">
-//             <div>
-//               <h2 className="text-4xl font-bold text-primary mb-2">Our Advocate</h2>
-//               <h3 className="text-2xl text-accent font-semibold">Dr. Umesh Manshore</h3>
-//             </div>
-
-//             <p className="text-lg text-muted-foreground leading-relaxed">
-//               Dr. Umesh Manshore brings unparalleled expertise and dedication to every case. With multiple advanced
-//               degrees and a Ph.D. in Law, he stands as one of the most qualified advocates in the region.
-//             </p>
-
-//             <div className="space-y-4">
-//               <div className="flex gap-3">
-//                 <GraduationCap className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-//                 <div>
-//                   <p className="font-semibold text-foreground">Educational Excellence</p>
-//                   <p className="text-muted-foreground text-sm">LL.B, LL.M, Ph.D., M.A., PGDCL</p>
-//                 </div>
-//               </div>
-//               <div className="flex gap-3">
-//                 <Briefcase className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-//                 <div>
-//                   <p className="font-semibold text-foreground">Extensive Experience</p>
-//                   <p className="text-muted-foreground text-sm">20+ years in criminal, civil, and commercial law</p>
-//                 </div>
-//               </div>
-//               <div className="flex gap-3">
-//                 <Award className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-//                 <div>
-//                   <p className="font-semibold text-foreground">Recognized Excellence</p>
-//                   <p className="text-muted-foreground text-sm">Multiple awards and accolades from bar associations</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Image */}
-//           <div className="relative h-96 rounded-lg overflow-hidden animate-in fade-in slide-in-from-right-4 duration-1000 delay-200">
-//             <img
-//               src="/distinguished-advocate-professional-portrait.jpg"
-//               alt="Dr. Umesh Manshore"
-//               className="w-full h-full object-cover rounded-lg shadow-2xl"
-//             />
-//             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-lg" />
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }

@@ -120,7 +120,7 @@ export default function ContactSection() {
                 <div className={`absolute inset-0 ${item.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
                 {/* Card */}
-                <div className="relative h-full p-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+                <div className="relative h-full p-6 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
                   {/* Icon */}
                   <div className="relative mb-4 mx-auto w-fit">
                     <div className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} />
@@ -154,7 +154,7 @@ export default function ContactSection() {
         <div 
           className={`max-w-3xl mx-auto transition-all duration-1000 mb-10 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <div className="relative p-8 md:p-12 bg-background/50 backdrop-blur-sm rounded-3xl border border-slate-800 shadow-2xl">
+          <div className="relative p-8 md:p-12 bg-background/80 backdrop-blur-sm rounded-3xl border border-slate-800 shadow-2xl">
             {/* Decorative Glow */}
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full filter blur-3xl" />
             <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/20 rounded-full filter blur-3xl" />
@@ -184,7 +184,7 @@ export default function ContactSection() {
                       onChange={handleChange}
                       onFocus={() => setFocusedInput('firstName')}
                       onBlur={() => setFocusedInput(null)}
-                      className="w-full px-4 py-3 bg-background/50 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-background/80 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
                     />
                     {focusedInput === 'firstName' && (
                       <div className="absolute inset-0 rounded-lg border-2 border-amber-500/50 pointer-events-none animate-pulse" />
@@ -199,7 +199,7 @@ export default function ContactSection() {
                       onChange={handleChange}
                       onFocus={() => setFocusedInput('lastName')}
                       onBlur={() => setFocusedInput(null)}
-                      className="w-full px-4 py-3 bg-background/50 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-background/80 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
                     />
                     {focusedInput === 'lastName' && (
                       <div className="absolute inset-0 rounded-lg border-2 border-amber-500/50 pointer-events-none animate-pulse" />
@@ -217,7 +217,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     onFocus={() => setFocusedInput('email')}
                     onBlur={() => setFocusedInput(null)}
-                    className="w-full px-4 py-3 bg-background/50 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-background/80 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
                   />
                   {focusedInput === 'email' && (
                     <div className="absolute inset-0 rounded-lg border-2 border-amber-500/50 pointer-events-none animate-pulse" />
@@ -234,7 +234,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     onFocus={() => setFocusedInput('phone')}
                     onBlur={() => setFocusedInput(null)}
-                    className="w-full px-4 py-3 bg-background/50 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-background/80 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300"
                   />
                   {focusedInput === 'phone' && (
                     <div className="absolute inset-0 rounded-lg border-2 border-amber-500/50 pointer-events-none animate-pulse" />
@@ -251,7 +251,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     onFocus={() => setFocusedInput('message')}
                     onBlur={() => setFocusedInput(null)}
-                    className="w-full px-4 py-3 bg-background/50 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-background/80 border border-slate-800 rounded-lg text-foreground placeholder-primary focus:outline-none focus:border-amber-500 transition-all duration-300 resize-none"
                   />
                   {focusedInput === 'message' && (
                     <div className="absolute inset-0 rounded-lg border-2 border-amber-500/50 pointer-events-none animate-pulse" />

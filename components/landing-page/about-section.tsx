@@ -122,7 +122,7 @@ export default function AboutSection() {
                   Trust in Us
                 </span>
               </h2>
-              <p className="text-lg text-primary leading-relaxed">
+              <p className="text-lg text-white leading-relaxed">
                 With years of proven expertise and a commitment to justice, we stand as your steadfast advocates in the legal arena.
               </p>
             </div>
@@ -136,18 +136,14 @@ export default function AboutSection() {
                 return (
                   <div 
                     key={index}
-                    className={`group relative p-6 rounded-xl border transition-all duration-500 cursor-pointer ${
-                      isActive 
-                        ? 'bg-background border-slate-700 shadow-xl' 
-                        : 'bg-background/30 border-slate-800 hover:bg-slate-800/30 hover:border-slate-700'
-                    }`}
+                    className={`group relative bg-background p-6 rounded-xl border transition-all duration-500 cursor-pointer`}
                     onMouseEnter={() => setActiveIndex(index)}
                   >
                     
                     {/* Glow Effect */}
-                    <div className={`absolute inset-0 bg-linear-to-r ${item.gradient} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-500`} />
+                    <div className={`absolute inset-0 bg-background opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-500`} />
                     
-                    <div className="relative flex gap-4 items-start">
+                    <div className="relative flex gap-4 items-start bg-background">
                       {/* Icon */}
                       <div className={`shrink-0 w-12 h-12 rounded-lg ${item.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <Icon className="w-6 h-6 text-foreground" strokeWidth={2} />
@@ -199,57 +195,3 @@ export default function AboutSection() {
     </section>
   )
 }
-// export default function AboutSection() {
-//   return (
-//     <section id="about" className="py-20 bg-background">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-//           {/* Image */}
-//           <div className="relative h-96 rounded-lg overflow-hidden order-2 lg:order-1 animate-in fade-in slide-in-from-left-4 duration-1000">
-//             <img
-//               src="/lady-justice-statue-elegant.jpg"
-//               alt="Lady Justice"
-//               className="w-full h-full object-cover rounded-lg shadow-lg"
-//             />
-//           </div>
-
-//           {/* Content */}
-//           <div className="space-y-8 order-1 lg:order-2 animate-in fade-in slide-in-from-right-4 duration-1000 delay-200">
-//             <div>
-//               <h2 className="text-4xl font-bold text-primary mb-4">Why Put Your Trust in Us</h2>
-//               <p className="text-lg text-muted-foreground leading-relaxed">
-//                 With years of proven expertise and a commitment to justice, we stand as your steadfast advocates in the
-//                 legal arena.
-//               </p>
-//             </div>
-
-//             <div className="space-y-4">
-//               {[
-//                 {
-//                   title: "Integrity First",
-//                   description: "We uphold the highest ethical standards in every case we handle",
-//                 },
-//                 {
-//                   title: "Proven Case Dismissals",
-//                   description: "Our strategic approach has resulted in thousands of successful case dismissals",
-//                 },
-//                 {
-//                   title: "Swift Action",
-//                   description: "Quick charges defense and rapid response to protect your rights",
-//                 },
-//               ].map((item, index) => (
-//                 <div key={index} className="flex gap-4 group">
-//                   <div className="w-1 bg-accent rounded group-hover:w-2 transition-all duration-300" />
-//                   <div>
-//                     <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-//                     <p className="text-muted-foreground text-sm">{item.description}</p>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }

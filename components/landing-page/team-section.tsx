@@ -82,7 +82,7 @@ export default function TeamSection() {
                 {/* <div className={`absolute inset-0 bg-gradient-to-r ${associate.gradient} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-opacity duration-500`} /> */}
                 
                 {/* Card */}
-                <div className="relative p-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center h-full flex flex-col">
+                <div className="relative p-6 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center h-full flex flex-col">
                   {/* Avatar Container */}
                   <div className="relative mb-5 mx-auto">
                     {/* Rotating Ring */}
@@ -116,7 +116,7 @@ export default function TeamSection() {
                   
                   {/* Credentials */}
                   <div className="mt-auto">
-                    <div className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-background/50 border border-slate-700">
+                    <div className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-background/80 border border-slate-700">
                       <span className="text-xs text-primary font-medium">Advocate, LL.B</span>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function TeamSection() {
         <div 
           className={`mt-20 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-8 py-8 bg-background/50 backdrop-blur-sm rounded-2xl border border-slate-800">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-8 py-8 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800">
             <div className="flex items-center gap-3">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
                 <Users className="w-7 h-7 text-foreground" />
@@ -193,48 +193,3 @@ export default function TeamSection() {
     </section>
   )
 }
-// export default function TeamSection() {
-//   const associates = [
-//     "Shakeel S",
-//     "Hitesh Kiran T",
-//     "Vishal Sharma",
-//     "Taseef Majeed",
-//     "Aadil Bensaleh",
-//     "JRF Thomas",
-//     "Hitesh Bharati",
-//     "Aijaz Omar",
-//     "Pankesh Bhai",
-//     "Robert Bhagat",
-//     "Poonam Mehta",
-//     "Ranjeet Bhagat",
-//   ]
-
-//   return (
-//     <section id="team" className="py-20 bg-gradient-to-br from-background to-secondary/5">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-16 animate-fade-in-down">
-//           <h2 className="text-4xl font-bold text-primary mb-4">Our Associates</h2>
-//           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-//             A team of highly qualified advocates dedicated to achieving justice for our clients
-//           </p>
-//         </div>
-
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-//           {associates.map((name, index) => (
-//             <div
-//               key={index}
-//               className="group p-6 bg-card rounded-lg border border-border hover:border-accent/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center animate-fade-in-up"
-//               style={{ animationDelay: `${index * 50}ms` }}
-//             >
-//               <div className="w-20 h-20 bg-accent/20 rounded-full mx-auto mb-4 group-hover:bg-accent/40 transition-all duration-300 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3">
-//                 <span className="text-2xl animate-float">⚖️</span>
-//               </div>
-//               <h3 className="font-semibold text-foreground mb-1">{name}</h3>
-//               <p className="text-sm text-muted-foreground">Advocate, LL.B</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
