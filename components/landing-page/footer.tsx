@@ -46,13 +46,16 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // const quickLinks = [
-  //   { name: "Home", href: "#home" },
-  //   { name: "About", href: "#about" },
-  //   { name: "Services", href: "#services" },
-  //   { name: "Team", href: "#team" },
-  //   { name: "Contact", href: "#contact" },
-  // ]
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Testimonials", href: "/testimonials" },
+  ]
 
   const services = [
     "Criminal Law",
@@ -80,7 +83,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           {/* Brand Section */}
           <div
             className={`transition-all duration-1000 ${
@@ -143,6 +146,29 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          {/* Quick Links */}
+          <div
+            className={`transition-all duration-1000 delay-150 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <h4 className="font-bold text-white mb-4 text-lg">Quick Links</h4>
+            <ul className="space-y-3">
+              {quickLinks.map((quickLinks, index) => (
+                <li
+                  key={index}
+                  className="group flex items-center gap-2 cursor-pointer"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-amber-500 transition-colors" />
+                  <Link href={quickLinks.href} className="text-sm text-slate-400 group-hover:text-amber-500 transition-colors">
+                    {quickLinks.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Contact */}
           <div
@@ -155,7 +181,7 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4 text-lg">Contact</h4>
             <ul className="space-y-5">
               <li className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  flex items-center justify-center">
                   <Phone className="w-4 h-4 text-amber-500" />
                 </div>
                 <div>

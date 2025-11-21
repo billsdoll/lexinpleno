@@ -1,7 +1,6 @@
 "use client";
 // import { useEffect, useState } from "react"
 import { Scale, Shield, Award } from "lucide-react";
-import Image from "next/image";
 
 export default function HeroSection() {
   const isVisible = true;
@@ -33,7 +32,7 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-8">
             {/* Badge */}
             <div
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm transition-all duration-1000 ${
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm transition-all duration-1000 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -97,7 +96,7 @@ export default function HeroSection() {
               }`}
             >
               <div className="flex flex-col items-center text-center space-y-2 rounded-sm bg-black/40 p-4">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  flex items-center justify-center">
                   <Award className="w-5 h-5 text-amber-500" />
                 </div>
                 <p className="text-2xl font-bold text-white">10,000+</p>

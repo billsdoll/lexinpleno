@@ -36,7 +36,7 @@ export default function AboutSection() {
       title: "Integrity First",
       description: "We uphold the highest ethical standards in every case we handle",
       gradient: "from-amber-500 to-orange-500",
-      iconBg: "bg-amber-500/10"
+      iconBg: "bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 "
     },
     {
       icon: CheckCircle,
@@ -78,21 +78,21 @@ export default function AboutSection() {
                 {/* <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" /> */}
                 
                 {/* Floating Stats Card */}
-                <div className="absolute bottom-8 left-8 right-8 p-6 bg-background backdrop-blur-xl rounded-xl border border-slate-800 shadow-2xl">
+                <div className="absolute bottom-8 left-8 right-8 p-6 bg-slate-900/50 hover:bg-slate-900/80  border-slate-800  backdrop-blur-xl rounded-xl border shadow-2xl">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-3xl font-bold bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">25+</p>
-                      <p className="text-sm text-primary font-medium">Years of Excellence</p>
+                      <p className="text-sm text-background/50 font-medium">Years of Excellence</p>
                     </div>
                     <div className="w-px h-12 bg-slate-700" />
                     <div>
                       <p className="text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">10K+</p>
-                      <p className="text-sm text-primary font-medium">Cases Won</p>
+                      <p className="text-sm text-background/50 font-medium">Cases Won</p>
                     </div>
                     <div className="w-px h-12 bg-slate-700" />
                     <div>
                       <p className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">3000+</p>
-                      <p className="text-sm text-primary font-medium">Trusted Clients</p>
+                      <p className="text-sm text-background/50 font-medium">Trusted Clients</p>
                     </div>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function AboutSection() {
             className={`space-y-8 order-1 lg:order-2 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm">
               <Scale className="w-4 h-4 text-amber-500" />
               <span className="text-sm font-medium text-amber-400">About Our Firm</span>
             </div>
@@ -136,17 +136,17 @@ export default function AboutSection() {
                 return (
                   <div 
                     key={index}
-                    className={`group relative bg-background p-6 rounded-xl border transition-all duration-500 cursor-pointer`}
+                    className={`group relative bg-slate-900/50 hover:bg-slate-900/80  border-slate-800  p-6 rounded-xl border transition-all duration-500 cursor-pointer`}
                     onMouseEnter={() => setActiveIndex(index)}
                   >
                     
                     {/* Glow Effect */}
-                    <div className={`absolute inset-0 bg-background opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-500`} />
+                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-500`} />
                     
-                    <div className="relative flex gap-4 items-start bg-background">
+                    <div className="relative flex gap-4 items-start">
                       {/* Icon */}
                       <div className={`shrink-0 w-12 h-12 rounded-lg ${item.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-6 h-6 text-foreground" strokeWidth={2} />
+                        <Icon className="w-6 h-6 text-background" strokeWidth={2} />
                       </div>
                       
                       {/* Content */}
@@ -154,11 +154,11 @@ export default function AboutSection() {
                         <h3 className={`font-bold text-lg mb-2 transition-all duration-300 ${
                           isActive 
                             ? 'text-transparent bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text' 
-                            : 'text-foregrond group-hover:text-primary'
+                            : 'text-background group-hover:text-background/50'
                         }`}>
                           {item.title}
                         </h3>
-                        <p className="text-primary text-sm leading-relaxed group-hover:text-primary transition-colors duration-300">
+                        <p className="text-background/50 text-sm leading-relaxed group-hover:text-background/50 transition-colors duration-300">
                           {item.description}
                         </p>
                       </div>

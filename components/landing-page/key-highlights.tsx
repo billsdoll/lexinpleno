@@ -58,7 +58,7 @@ export default function KeyHighlights() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             <Award className="w-4 h-4 text-amber-500" />
             <span className="text-sm font-medium text-amber-400">Why Choose Us</span>
@@ -91,23 +91,23 @@ export default function KeyHighlights() {
                 {/* <div className={`absolute inset-0 ${highlight.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
                 
                 {/* Card */}
-                <div className={`relative p-8 bg-background backdrop-blur-sm hover:scale-105 rounded-2xl ${highlight.hoverGlow} hover:shadow-xl hover:border-slate-700  hover:-translate-y-2 transition-all duration-500`}>
+                <div className={`relative p-8 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  backdrop-blur-sm hover:scale-105 rounded-2xl ${highlight.hoverGlow} hover:shadow-xl hover:border-slate-700  hover:-translate-y-2 transition-all duration-500`}>
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     {/* Glow Icon background */}
                     {/* <div className={`absolute inset-0 bg-linear-to-r ${highlight.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} /> */}
 
                     <div className={`relative w-16 h-16 rounded-xl bg-transparent border flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`w-8 h-8 text-foreground`} strokeWidth={2.5} />
+                      <Icon className={`w-8 h-8 text-background`} strokeWidth={2.5} />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-background mb-3 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
                     {highlight.title}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed group-hover:text-primary transition-colors duration-300">
+                  <p className="text-background/50 leading-relaxed group-hover:text-background transition-colors duration-300">
                     {highlight.description}
                   </p>
 
@@ -127,14 +127,14 @@ export default function KeyHighlights() {
 
         {/* Bottom Decorative Element */}
         <div className={`mt-20 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-8 py-6 bg-background hover:scale-105 backdrop-blur-sm rounded-2xl transition-all shadow-sm duration-300 hover:shadow-lg hover:shadow-black">
+          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-8 py-6 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  hover:scale-105 backdrop-blur-sm rounded-2xl transition-all shadow-sm duration-300 hover:shadow-lg hover:shadow-black">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-linear-to-r from-amber-500 to-orange-500 flex items-center justify-center">
-                <span className="text-foreground text-xl font-bold">✓</span>
+                <span className="text-background text-xl font-bold">✓</span>
               </div>
               <div className="text-left">
-                <p className="text-2xl font-bold text-foreground">100%</p>
-                <p className="text-sm text-foreground">Client Satisfaction</p>
+                <p className="text-2xl font-bold text-background">100%</p>
+                <p className="text-sm text-background">Client Satisfaction</p>
               </div>
             </div>
             
@@ -142,11 +142,11 @@ export default function KeyHighlights() {
             
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-linear-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                <Shield className="w-6 h-6 text-foreground" />
+                <Shield className="w-6 h-6 text-background" />
               </div>
               <div className="text-left">
-                <p className="text-2xl font-bold text-foreground">24/7</p>
-                <p className="text-sm text-foreground">Legal Support</p>
+                <p className="text-2xl font-bold text-background">24/7</p>
+                <p className="text-sm text-background">Legal Support</p>
               </div>
             </div>
             
@@ -154,11 +154,11 @@ export default function KeyHighlights() {
             
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                <Award className="w-6 h-6 text-foreground" />
+                <Award className="w-6 h-6 text-background" />
               </div>
               <div className="text-left">
-                <p className="text-2xl font-bold text-foreground">Award</p>
-                <p className="text-sm text-foreground">Winning Team</p>
+                <p className="text-2xl font-bold text-background">Award</p>
+                <p className="text-sm text-background">Winning Team</p>
               </div>
             </div>
           </div>

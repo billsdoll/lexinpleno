@@ -1,10 +1,3 @@
-"use client";
-import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-
-// Header Component
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -19,49 +12,33 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 shadow-lg shadow-slate-900/50"
-          : "bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/50"
-      }`}
+      className={`top-0 w-full h-20 z-10 transition-all fixed duration-300`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="top-3">
             {/* <div className="flex flex-col"> */}
             <Image
               alt="logo"
-              width={200}
-              height={200}
+              width={250}
+              height={250}
               // fill
-              src="/logo.png"
+              // src="/logo.png"
+              src="/logo-2.png"
+              className=""
             />
             {/* </div> */}
           </Link>
-          {/* <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
-              <div className="relative w-12 h-12 rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
-                <Scale className="w-7 h-7 text-white" strokeWidth={2.5} />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-lg font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-                Lex in Pleno
-              </span>
-              <span className="text-xs text-slate-400">Legal Services</span>
-            </div>
-          </div> */}
 
           {/* Contact Number */}
           <div className="hidden md:flex items-center gap-6">
             <a
               href="tel:+919794717544"
-              className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/50 border border-slate-800 hover:border-amber-500/50 transition-all duration-300"
+              className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-background/80 border border-slate-800 hover:border-amber-500/50 transition-all duration-300"
             >
               <Phone className="w-4 h-4 text-amber-500 group-hover:rotate-12 transition-transform" />
-              <span className="text-sm text-slate-300 group-hover:text-white transition-colors">
+              <span className="text-lg text-foreground transition-colors">
                 +91 9794 717544
               </span>
             </a>
@@ -97,41 +74,60 @@ export default function Header() {
     </header>
   );
 }
-,
-"use client"
-// import { useEffect, useState } from "react"
-import { Scale, Shield, Award } from "lucide-react"
-import Image from "next/image"
 
 export default function HeroSection() {
-  const isVisible = true
+  const isVisible = true;
   // const [scrollY, setScrollY] = useState(0)
 
-
-
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-transparent">
-
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden pt-20"
+    >
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: "url('/wakil-sahab.jpg')",
+        }}
+      />
+      {/* <Image
+        src="/wakil-sahab.jpg"
+        alt="lawyer"
+        fill
+        priority
+        className="object-cover object-center"
+        style={{ zIndex: 1 }}
+      /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-f-fit">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Content Section */}
           <div className="lg:col-span-7 space-y-8">
             {/* Badge */}
-            <div 
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            <div
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm transition-all duration-1000 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
             >
               <Scale className="w-4 h-4 text-amber-500" />
-              <span className="text-sm font-medium text-amber-500 dark:text-amber-400">Trusted Legal Excellence</span>
+              <span className="text-sm font-medium text-amber-500 dark:text-amber-400">
+                Trusted Legal Excellence
+              </span>
             </div>
 
             {/* Main Heading */}
-            <h1 
-              className={`text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            <h1
+              className={`text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight transition-all duration-1000 delay-100 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
             >
-              <span className="text-foreground ">Don&apos;t Feel</span>
+              <span className="text-white ">Don&apos;t Feel</span>
               <br />
-              <span className="text-foreground ">Helpless.</span>
+              <span className="text-white ">Helpless.</span>
               <br />
               <span className="bg-linear-to-r from-amber-400 via-amber-500 to-orange-500 bg-clip-text text-transparent">
                 We Fight for Justice.
@@ -139,10 +135,16 @@ export default function HeroSection() {
             </h1>
 
             {/* Description */}
-            <p 
-              className={`text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            <p
+              className={`text-lg text-white leading-relaxed max-w-xl transition-all duration-1000 delay-200 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
             >
-              From the first consultation to the final verdict, we&apos;re dedicated to protecting your rights and achieving the justice you deserve with unwavering commitment.
+              From the first consultation to the final verdict, we&apos;re
+              dedicated to protecting your rights and achieving the justice you
+              deserve with unwavering commitment.
             </p>
 
             {/* CTA Buttons */}
@@ -159,52 +161,57 @@ export default function HeroSection() {
             </div> */}
 
             {/* Stats Grid */}
-            <div 
-              className={`grid grid-cols-3 gap-6 pt-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            <div
+              className={`grid grid-cols-3 gap-6 pt-8 transition-all duration-1000 delay-500 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
             >
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
-                    <Award className="w-5 h-5 text-amber-500" />
-                  </div>
+              <div className="flex flex-col items-center text-center space-y-2 rounded-sm bg-black/40 p-4">
+                <div className="w-10 h-10 rounded-lg bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  flex items-center justify-center">
+                  <Award className="w-5 h-5 text-amber-500" />
                 </div>
-                <p className="text-2xl font-bold text-foreground ">10,000+</p>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Cases Resolved</p>
+                <p className="text-2xl font-bold text-white">10,000+</p>
+                <p className="text-sm text-white">Cases Resolved</p>
               </div>
-              
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center ">
-                    <Shield className="w-5 h-5 text-blue-500" />
-                  </div>
+
+              <div className="flex flex-col items-center text-center space-y-2 rounded-sm bg-black/40 p-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-blue-500" />
                 </div>
-                <p className="text-2xl font-bold text-foreground ">98%</p>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Success Rate</p>
+                <p className="text-2xl font-bold text-white">98%</p>
+                <p className="text-sm text-white">Success Rate</p>
               </div>
-              
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center ">
-                    <Scale className="w-5 h-5 text-purple-500" />
-                  </div>
+
+              <div className="flex flex-col items-center text-center space-y-2 rounded-sm bg-black/40 p-4">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                  <Scale className="w-5 h-5 text-purple-500" />
                 </div>
-                <p className="text-2xl font-bold text-foreground ">25+</p>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Years Experience</p>
+                <p className="text-2xl font-bold text-white">25+</p>
+                <p className="text-sm text-white">Years Experience</p>
               </div>
             </div>
           </div>
 
           {/* Image Section */}
           <div className="lg:col-span-5 relative">
-            <div 
-              className={`relative transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
+            <div
+              className={`relative transition-all duration-1000 delay-400 ${
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-8"
+              }`}
             >
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-72 h-72 bg-amber-500/20 rounded-full filter blur-3xl animate-pulse" />
-              <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-              
+              <div
+                className="absolute -bottom-4 -left-4 w-72 h-72 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"
+                style={{ animationDelay: "1s" }}
+              />
+
               {/* Main Image Container */}
-              <div className="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 backdrop-blur-sm shadow-2xl">
+              {/* <div className="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 backdrop-blur-sm shadow-2xl">
                 <div className="aspect-3/4 bg-linear-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 ">
                   <Image
                     fill 
@@ -212,17 +219,15 @@ export default function HeroSection() {
                     alt="Professional Legal Team"
                     className="w-full h-full object-cover opacity-90"
                   />
-                  {/* <div className="absolute inset-0 bg-linear-to-t from-gray-50/50 via-transparent to-transparent dark:from-slate-950" /> */}
                 </div>
                 
-                {/* Floating Card */}
-                <div className="absolute bottom-6 left-6 right-6 p-6 bg-background/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/20">
+                <div className="absolute bottom-6 left-6 right-6 p-6 bg-background/95 backdrop-blur-md rounded-xl shadow-2xl border border-black/40">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-linear-to-br from-amber-500 to-orange-500 flex items-center justify-center shrink-0">
                       <span className="text-white text-xl font-bold">✓</span>
                     </div>
                     <div>
-                      <p className="font-bold text-foreground text-lg">Dr. Umesh Manshore</p>
+                      <p className="font-bold text-white text-lg">Dr. Umesh Manshore</p>
                       <p className="text-sm text-primary/30 font-medium">Lead Advocate & Legal Expert</p>
                       <div className="flex items-center gap-1 mt-2">
                         {[...Array(5)].map((_, i) => (
@@ -234,7 +239,7 @@ export default function HeroSection() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -252,12 +257,8 @@ export default function HeroSection() {
         }
       `}</style>
     </section>
-  )
+  );
 }
-,
-"use client"
-import { Shield, CheckCircle, Award } from "lucide-react"
-import { useEffect, useState } from "react"
 
 export default function KeyHighlights() {
   const [isVisible, setIsVisible] = useState(false)
@@ -315,20 +316,20 @@ export default function KeyHighlights() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             <Award className="w-4 h-4 text-amber-500" />
             <span className="text-sm font-medium text-amber-400">Why Choose Us</span>
           </div>
           
           <h2 
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-4 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Our <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Commitment</span> to Excellence
           </h2>
           
           <p 
-            className={`text-lg text-muted-foreground max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`text-lg text-white max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Delivering exceptional legal services with integrity, expertise, and unwavering dedication
           </p>
@@ -341,14 +342,14 @@ export default function KeyHighlights() {
             return (
               <div
                 key={index}
-                className={`group relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                className={`group relative transition-all  duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                 style={{ transitionDelay: `${300 + index * 150}ms` }}
               >
                 {/* Glow Effect */}
-                <div className={`absolute inset-0 ${highlight.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                {/* <div className={`absolute inset-0 ${highlight.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
                 
                 {/* Card */}
-                <div className={`relative p-8 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 ${highlight.hoverGlow} hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500`}>
+                <div className={`relative p-8 bg-background backdrop-blur-sm hover:scale-105 rounded-2xl ${highlight.hoverGlow} hover:shadow-xl hover:border-slate-700  hover:-translate-y-2 transition-all duration-500`}>
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     {/* Glow Icon background */}
@@ -384,7 +385,7 @@ export default function KeyHighlights() {
 
         {/* Bottom Decorative Element */}
         <div className={`mt-20 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-8 py-6 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800">
+          <div className="inline-flex flex-col md:flex-row items-center gap-6 md:gap-8 px-6 md:px-8 py-6 bg-background hover:scale-105 backdrop-blur-sm rounded-2xl transition-all shadow-sm duration-300 hover:shadow-lg hover:shadow-black">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-linear-to-r from-amber-500 to-orange-500 flex items-center justify-center">
                 <span className="text-foreground text-xl font-bold">✓</span>
@@ -438,11 +439,6 @@ export default function KeyHighlights() {
     </section>
   )
 }
-,
-"use client"
-import { useEffect, useState } from "react"
-import { CheckCircle, Zap, Scale } from "lucide-react"
-import Image from "next/image"
 
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -477,7 +473,7 @@ export default function AboutSection() {
       title: "Integrity First",
       description: "We uphold the highest ethical standards in every case we handle",
       gradient: "from-amber-500 to-orange-500",
-      iconBg: "bg-amber-500/10"
+      iconBg: "bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 "
     },
     {
       icon: CheckCircle,
@@ -550,7 +546,7 @@ export default function AboutSection() {
             className={`space-y-8 order-1 lg:order-2 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm">
               <Scale className="w-4 h-4 text-amber-500" />
               <span className="text-sm font-medium text-amber-400">About Our Firm</span>
             </div>
@@ -563,7 +559,7 @@ export default function AboutSection() {
                   Trust in Us
                 </span>
               </h2>
-              <p className="text-lg text-primary leading-relaxed">
+              <p className="text-lg text-white leading-relaxed">
                 With years of proven expertise and a commitment to justice, we stand as your steadfast advocates in the legal arena.
               </p>
             </div>
@@ -577,18 +573,14 @@ export default function AboutSection() {
                 return (
                   <div 
                     key={index}
-                    className={`group relative p-6 rounded-xl border transition-all duration-500 cursor-pointer ${
-                      isActive 
-                        ? 'bg-background border-slate-700 shadow-xl' 
-                        : 'bg-background/30 border-slate-800 hover:bg-slate-800/30 hover:border-slate-700'
-                    }`}
+                    className={`group relative bg-background p-6 rounded-xl border transition-all duration-500 cursor-pointer`}
                     onMouseEnter={() => setActiveIndex(index)}
                   >
                     
                     {/* Glow Effect */}
-                    <div className={`absolute inset-0 bg-linear-to-r ${item.gradient} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-500`} />
+                    <div className={`absolute inset-0 bg-background opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-500`} />
                     
-                    <div className="relative flex gap-4 items-start">
+                    <div className="relative flex gap-4 items-start bg-background">
                       {/* Icon */}
                       <div className={`shrink-0 w-12 h-12 rounded-lg ${item.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <Icon className="w-6 h-6 text-foreground" strokeWidth={2} />
@@ -640,11 +632,6 @@ export default function AboutSection() {
     </section>
   )
 }
-,
-"use client"
-import { useEffect, useState } from "react"
-import { Award, GraduationCap, Briefcase, Star, TrendingUp } from "lucide-react"
-import Image from "next/image"
 
 export default function AdvocateProfile() {
   const [isVisible, setIsVisible] = useState(false)
@@ -696,7 +683,7 @@ export default function AdvocateProfile() {
       title: "Educational Excellence",
       description: "B.Com, LL.B, LL.M, M.Phil., Ph.D.",
       gradient: "from-amber-500 to-orange-500",
-      iconBg: "bg-amber-500/10",
+      iconBg: "bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 ",
       delay: "0ms"
     },
     {
@@ -727,14 +714,14 @@ export default function AdvocateProfile() {
             className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm">
               <Star className="w-4 h-4 text-amber-500" />
               <span className="text-sm font-medium text-amber-400">Lead Advocate</span>
             </div>
 
             {/* Heading */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">
                 Meet Our <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Distinguished</span>
               </h2>
               <h3 className="text-3xl font-bold bg-linear-to-r from-amber-400 via-amber-500 to-orange-500 bg-clip-text text-transparent">
@@ -744,12 +731,12 @@ export default function AdvocateProfile() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-amber-500 fill-amber-500" />
                 ))}
-                <span className="text-primary text-sm ml-2">5.0 Client Rating</span>
+                <span className="text-white text-sm ml-2">5.0 Client Rating</span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-white leading-relaxed">
               Dr. Umesh Manshore brings unparalleled expertise and dedication to every case. With multiple advanced degrees and a Ph.D. in Law, he stands as one of the most qualified advocates in the region.
             </p>
 
@@ -795,23 +782,23 @@ export default function AdvocateProfile() {
 
             {/* Stats Counter */}
             <div className="grid grid-cols-3 gap-4 pt-4">
-              <div className="text-center p-4 rounded-xl bg-linear-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20">
+              <div className="text-center p-4 rounded-xl bg-black/40 border border-amber-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
                   {countUp.cases}+
                 </p>
-                <p className="text-xs text-primary mt-1">Cases Won</p>
+                <p className="text-xs text-white mt-1">Cases Won</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-linear-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+              <div className="text-center p-4 rounded-xl bg-black/40 border border-blue-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                   {countUp.cities} +
                 </p>
-                <p className="text-xs text-primary mt-1">Years Exp.</p>
+                <p className="text-xs text-white mt-1">Years Exp.</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-linear-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+              <div className="text-center p-4 rounded-xl bg-black/40 border border-purple-500/20">
                 <p className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   {countUp.awards}+
                 </p>
-                <p className="text-xs text-primary mt-1">Awards</p>
+                <p className="text-xs text-white mt-1">Awards</p>
               </div>
             </div>
           </div>
@@ -895,217 +882,306 @@ export default function AdvocateProfile() {
     </section>
   )
 }
-,
-"use client"
-import { useEffect, useState } from "react"
-import { Scale, Users, Award } from "lucide-react"
 
-export default function TeamSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+const team = [
+  {
+    name: "Shakeel S",
+    specialization: "Criminal Law",
+    gradient: "from-amber-500 to-orange-500",
+    image: "/lawyers-image/lawyer-11.jpg",
+  },
+  {
+    name: "Hitesh Kiran T",
+    specialization: "Civil Litigation",
+    gradient: "from-blue-500 to-cyan-500",
+    image: "/lawyers-image/lawyer-2.jpg",
+  },
+  {
+    name: "Vishal Sharma",
+    specialization: "Corporate Law",
+    gradient: "from-purple-500 to-pink-500",
+    image: "/lawyers-image/lawyer-13.jpg",
+  },
+  {
+    name: "Taseef Majeed",
+    specialization: "Family Law",
+    gradient: "from-green-500 to-emerald-500",
+    image: "/lawyers-image/lawyer-17.jpg",
+  },
+  {
+    name: "Aadil Bensaleh",
+    specialization: "Tax Law",
+    gradient: "from-red-500 to-rose-500",
+    image: "/lawyers-image/lawyer-5.jpg",
+  },
+  {
+    name: "JRF Thomas",
+    specialization: "Property Law",
+    gradient: "from-indigo-500 to-purple-500",
+    image: "/lawyers-image/lawyer-14.jpg",
+  },
+  {
+    name: "Hitesh Bharati",
+    specialization: "Labour Law",
+    gradient: "from-yellow-500 to-amber-500",
+    image: "/lawyers-image/lawyer-15.jpg",
+  },
+  {
+    name: "Aijaz Omar",
+    specialization: "Consumer Law",
+    gradient: "from-teal-500 to-cyan-500",
+    image: "/lawyers-image/lawyer-8.jpg",
+  },
+  {
+    name: "Pankesh Bhai",
+    specialization: "Banking Law",
+    gradient: "from-orange-500 to-red-500",
+    image: "/lawyers-image/lawyer-9.jpg",
+  },
+  {
+    name: "Robert Bhagat",
+    specialization: "IP Law",
+    gradient: "from-violet-500 to-purple-500",
+    image: "/lawyers-image/lawyer-16.jpg",
+  },
+  {
+    name: "Poonam Mehta",
+    specialization: "Immigration Law",
+    gradient: "from-pink-500 to-rose-500",
+    image: "/lawyers-image/lawyer-3-w.jpg",
+  },
+  {
+    name: "Ranjeet Bhagat",
+    specialization: "Constitutional Law",
+    gradient: "from-cyan-500 to-blue-500",
+    image: "/lawyers-image/lawyer-12.jpg",
+  },
+];
+
+export default function Team() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
+    setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    const scroll = () => {
+      if (scrollRef.current && !isPaused) {
+        scrollRef.current.scrollLeft += 1;
+        if (
+          scrollRef.current.scrollLeft >=
+          scrollRef.current.scrollWidth - scrollRef.current.clientWidth
+        ) {
+          scrollRef.current.scrollLeft = 0;
         }
-      },
-      { threshold: 0.1 }
-    )
+      }
+    };
 
-    const section = document.getElementById('team-section')
-    if (section) observer.observe(section)
+    if (!isPaused) {
+      animationRef.current = setInterval(scroll, 30);
+    }
 
-    return () => observer.disconnect()
-  }, [])
-
-  const associates = [
-    { name: "Shakeel S", specialization: "Criminal Law", gradient: "from-amber-500 to-orange-500" },
-    { name: "Hitesh Kiran T", specialization: "Civil Litigation", gradient: "from-blue-500 to-cyan-500" },
-    { name: "Vishal Sharma", specialization: "Corporate Law", gradient: "from-purple-500 to-pink-500" },
-    { name: "Taseef Majeed", specialization: "Family Law", gradient: "from-green-500 to-emerald-500" },
-    { name: "Aadil Bensaleh", specialization: "Tax Law", gradient: "from-red-500 to-rose-500" },
-    { name: "JRF Thomas", specialization: "Property Law", gradient: "from-indigo-500 to-purple-500" },
-    { name: "Hitesh Bharati", specialization: "Labour Law", gradient: "from-yellow-500 to-amber-500" },
-    { name: "Aijaz Omar", specialization: "Consumer Law", gradient: "from-teal-500 to-cyan-500" },
-    { name: "Pankesh Bhai", specialization: "Banking Law", gradient: "from-orange-500 to-red-500" },
-    { name: "Robert Bhagat", specialization: "IP Law", gradient: "from-violet-500 to-purple-500" },
-    { name: "Poonam Mehta", specialization: "Immigration Law", gradient: "from-pink-500 to-rose-500" },
-    { name: "Ranjeet Bhagat", specialization: "Constitutional Law", gradient: "from-cyan-500 to-blue-500" },
-  ]
+    return () => {
+      if (animationRef.current) clearInterval(animationRef.current);
+    };
+  }, [isPaused]);
 
   return (
-    <section id="team-section" className="relative min-h-screen mb-40 flex items-center overflow-hidden bg-transparent">
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-          >
-            <Users className="w-4 h-4 text-amber-500" />
-            <span className="text-sm font-medium text-amber-400">Our Legal Team</span>
-          </div>
-          
-          <h2 
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-4 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-          >
-            Meet Our <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Expert</span> Associates
+    <section id="team" className="py-20 min-h-screen ">
+      <div className=" px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Meet Our Expert Team
           </h2>
-          
-          <p 
-            className={`text-lg text-primary max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-          >
-            A team of highly qualified advocates dedicated to achieving justice for our clients across diverse practice areas
+          <p className="text-lg text-white max-w-2xl mx-auto">
+            Experienced attorneys with proven expertise across all legal domains
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-24">
-          {associates.map((associate, index) => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const isHovered = hoveredIndex === index
-            const delay = 300 + index * 50
-            
-            return (
-              <div
-                key={index}
-                className={`group relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-                style={{ transitionDelay: `${delay}ms` }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+        <div
+          ref={scrollRef}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          className="flex gap-10 overflow-x-auto scroll-smooth items-center pb-4 hide-scrollbar min-h-[500px]"
+          style={{
+            scrollBehavior: "smooth",
+            msOverflowStyle: "none",
+            scrollbarWidth: "none",
+          }}
+        >
+          {[...team, ...team].map((member, idx) => (
+            <div
+              key={idx}
+              className={`shrink-0 w-75  ${
+                isLoaded ? "animate-fade-in" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${(idx % team.length) * 0.08}s` }}
+            >
+              <Card
+                className="group hover:shadow-black hover:shadow-xl py-0 border-0 transition-all bg-transparent duration-300 cursor-pointer hover:scale-105 bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage: `url(${member.image})`,
+                }}
               >
-                {/* Glow Effect */}
-                {/* <div className={`absolute inset-0 bg-gradient-to-r ${associate.gradient} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-opacity duration-500`} /> */}
-                
-                {/* Card */}
-                <div className="relative p-6 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center h-full flex flex-col">
-                  {/* Avatar Container */}
-                  <div className="relative mb-5 mx-auto">
-                    {/* Rotating Ring */}
-                    {/* <div className={`absolute inset-0 rounded-full transition-transform duration-700 ${isHovered ? 'rotate-180' : 'rotate-0'}`}>
-                      <div className={`w-24 h-24 rounded-full border-4 border-dashed bg-gradient-to-r ${associate.gradient} opacity-20`} />
-                    </div> */}
-                    
-                    {/* Inner Glow */}
-                    {/* <div className={`absolute inset-0 bg-gradient-to-r ${associate.gradient} rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500`} /> */}
-                    
-                    {/* Avatar Circle */}
-                    <div className={`relative w-24 h-24 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg`}>
-                      <Scale className="w-10 h-10 text-foreground group-hover:rotate-12 transition-transform duration-500" strokeWidth={2.5} />
-                    </div>
-                    
-                    {/* Floating Badge */}
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-primary border-2 border-slate-700 flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
-                      <Award className="w-4 h-4 text-amber-500" />
-                    </div>
-                  </div>
+                <div className={`h-40 `}></div>
 
-                  {/* Name */}
-                  <h3 className="font-bold text-lg text-foreground mb-2 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
-                    {associate.name}
+                <div className="p-6 bg-black/40 my-rounded-bottom">
+                  <h3 className="group bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                    {member.name}
                   </h3>
-                  
-                  {/* Specialization */}
-                  <p className={`text-sm font-medium bg-gradient-to-r ${associate.gradient} bg-clip-text text-transparent mb-3`}>
-                    {associate.specialization}
-                  </p>
-                  
-                  {/* Credentials */}
-                  <div className="mt-auto">
-                    <div className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-background/80 border border-slate-700">
-                      <span className="text-xs text-primary font-medium">Advocate, LL.B</span>
-                    </div>
-                  </div>
 
-                  {/* Bottom Accent Line */}
-                  {/* <div className={`absolute bottom-1 left-0 right-0 h-1 bg-gradient-to-r ${associate.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} /> */}
-                  
-                  {/* Corner Dot */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${associate.gradient} animate-ping`} />
-                    <div className={`absolute top-0 w-2 h-2 rounded-full bg-gradient-to-r ${associate.gradient}`} />
+                  <div className="pt-4 border-t border-border">
+                    <Badge className="text-sm bg-black/70 font-semibold mb-4">
+                      {member.specialization}
+                    </Badge>
                   </div>
                 </div>
-              </div>
-            )
-          })}
-        </div>
-
-        {/* Bottom Stats Bar */}
-        <div 
-          className={`mt-20 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-        >
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-8 py-8 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800">
-            <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
-                <Users className="w-7 h-7 text-foreground" />
-              </div>
-              <div className="text-left">
-                <p className="text-3xl font-bold text-foreground">12+</p>
-                <p className="text-sm text-primary">Expert Associates</p>
-              </div>
+              </Card>
             </div>
-            
-            <div className="hidden md:block w-px h-16 bg-slate-800" />
-            
-            <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                <Scale className="w-7 h-7 text-foreground" />
-              </div>
-              <div className="text-left">
-                <p className="text-3xl font-bold text-foreground">15+</p>
-                <p className="text-sm text-primary">Practice Areas</p>
-              </div>
-            </div>
-            
-            <div className="hidden md:block w-px h-16 bg-slate-800" />
-            
-            <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                <Award className="w-7 h-7 text-foreground" />
-              </div>
-              <div className="text-left">
-                <p className="text-3xl font-bold text-foreground">100%</p>
-                <p className="text-sm text-primary">Dedicated Service</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
       <style jsx>{`
-        @keyframes pulse {
-          0%, 100% { opacity: 0.1; }
-          50% { opacity: 0.2; }
-        }
-        
-        @keyframes ping {
-          75%, 100% {
-            transform: scale(2);
-            opacity: 0;
-          }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </section>
+  );
+}
+
+const cases = [
+  {
+    title: 'Multi-Million Dollar M&A Deal',
+    client: 'TechCorp Industries',
+    result: '₹250 Lakhs acquisition successfully negotiated',
+    category: 'Corporate Law',
+    icon: TrendingUp,
+    image: '/business-meeting-conference-room.jpg',
+    details: 'Complex cross-border merger with regulatory compliance'
+  },
+  {
+    title: 'Patent Infringement Victory',
+    client: 'InnovateLabs',
+    result: '₹15 Lakhs settlement secured',
+    category: 'IP Protection',
+    icon: Award,
+    image: '/patent-technology-innovation.jpg',
+    details: 'Successfully defended intellectual property rights in federal court'
+  },
+  {
+    title: 'Complex Commercial Litigation',
+    client: 'Global Enterprises LLC',
+    result: 'Favorable judgment in high-stakes dispute',
+    category: 'Litigation',
+    icon: TrendingUp,
+    image: '/courtroom-justice-law-scales.jpg',
+    details: 'Strategic litigation approach saved client ₹8 Lakhs'
+  },
+  {
+    title: 'Employment Law Settlement',
+    client: 'MidCorp Solutions',
+    result: 'Fair resolution protecting all parties',
+    category: 'Employment Law',
+    icon: Award,
+    image: '/hr-workplace-collaboration-team.jpg',
+    details: 'Successfully negotiated fair terms for both employer and employees'
+  },
+  {
+    title: 'Real Estate Acquisition',
+    client: 'Apex Property Group',
+    result: '₹45 Lakhs commercial property deal closed',
+    category: 'Real Estate Law',
+    icon: CheckCircle,
+    image: '/modern-building-architecture.jpg',
+    details: 'Expedited closing with zero regulatory delays'
+  },
+  {
+    title: 'Tax Dispute Resolution',
+    client: 'Financial Holdings Inc.',
+    result: 'Tax assessment reduced by 35%',
+    category: 'Tax Law',
+    icon: TrendingUp,
+    image: '/financial-charts-analysis.jpg',
+    details: 'Successfully challenged IRS determination through appeals'
+  },
+]
+
+export default function CaseStudies() {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
+  return (
+    <section id="cases" className="py-20 relative overflow-hidden">
+      <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-20 left-20 w-32 h-32 bg-accent/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.7s'}}></div>
+
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Case Studies & Results
+          </h2>
+          <p className="text-lg text-white max-w-2xl mx-auto">
+            Proven track record of successful outcomes and strategic victories for our clients
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {cases.map((caseStudy, idx) => {
+            const Icon = caseStudy.icon
+            return (
+              <Card
+                key={idx}
+                className={`overflow-hidden bg-white/70 hover:bg-white hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2 ${
+                  isLoaded ? 'animate-slide-up' : 'opacity-0'
+                }`}
+                style={{ animationDelay: `${idx * 0.12}s` }}
+              >
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden bg-muted">
+                  <Image
+                    fill
+                    src={caseStudy.image}
+                    alt={caseStudy.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-primary/90 via-primary/40 to-transparent" />
+                  <div className="absolute top-4 right-4 bg-black text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                    <Icon size={14} />
+                    {caseStudy.category}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-lg font-bold text-primary flex-1 group-hover:text-amber-500 transition-colors">{caseStudy.title}</h3>
+                  </div>
+                  
+                  <p className="text-sm text-foreground/60 mb-3 font-semibold">Client: {caseStudy.client}</p>
+                  <p className="text-xs text-foreground/50 mb-4">{caseStudy.details}</p>
+                  
+                  <div className="p-4 bg-accent/5 rounded-lg border border-accent/20 group-hover:bg-accent/10 transition-colors">
+                    <p className="text-xs font-semibold text-accent mb-1">Result</p>
+                    <p className="text-sm font-bold text-primary">{caseStudy.result}</p>
+                  </div>
+                </div>
+              </Card>
+            )
+          })}
+        </div>
+      </div>
+    </section>
   )
 }
-,
-"use client";
-import { useEffect, useState } from "react";
-import {
-  Scale,
-  Users,
-  Briefcase,
-  Home,
-  Heart,
-  Gavel,
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react";
-import { Button } from "../ui/button";
-import Link from "next/link";
 
 export default function ServicesSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -1196,7 +1272,7 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -1209,7 +1285,7 @@ export default function ServicesSection() {
           </div>
 
           <h2
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-4 transition-all duration-1000 delay-100 ${
+            className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 delay-100 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -1222,7 +1298,7 @@ export default function ServicesSection() {
           </h2>
 
           <p
-            className={`text-lg text-primary max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
+            className={`text-lg text-white max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -1388,12 +1464,6 @@ export default function ServicesSection() {
     </section>
   );
 }
-,
-"use client"
-
-import { useEffect, useState } from "react"
-import { MapPin, Phone, Mail, Globe, Send, Clock, CheckCircle2 } from "lucide-react"
-import { Button } from "../ui/button"
 
 export default function ContactSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -1439,6 +1509,7 @@ export default function ContactSection() {
     {
       icon: MapPin,
       title: "Address",
+      link:"https://www.google.com/maps/place/Akanksha+Trade+Centre,+156,+Kanchan+Bagh,+Indore,+Madhya+Pradesh+452001/@22.718154,75.8790164,17z/data=!3m1!4b1!4m6!3m5!1s0x3962fd3c6d099f9f:0xdeca6826474d63b6!8m2!3d22.7181491!4d75.8815913!16s%2Fg%2F11wb2gwc9f?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D",
       content: "106 Akanksha Trade Centre 156 Kanchan Bagh Indore-452001 (M.P)",
       gradient: "from-amber-500 to-orange-500",
       bgGlow: "bg-amber-500/20"
@@ -1459,14 +1530,6 @@ export default function ContactSection() {
       gradient: "from-purple-500 to-pink-500",
       bgGlow: "bg-purple-500/20"
     },
-    {
-      icon: Globe,
-      title: "Website",
-      content: "www.lexinpleno.com",
-      link: "https://lexinpleno.com/",
-      gradient: "from-green-500 to-emerald-500",
-      bgGlow: "bg-green-500/20"
-    },
   ]
 
   return (
@@ -1476,27 +1539,27 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             <Mail className="w-4 h-4 text-amber-500" />
             <span className="text-sm font-medium text-amber-400">Contact Us</span>
           </div>
           
           <h2 
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-4 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`text-4xl md:text-5xl font-bold text-white mb-4 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Get in <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Touch</span>
           </h2>
           
           <p 
-            className={`text-lg text-primary max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`text-lg text-white max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Reach out to us for a consultation or to discuss your legal needs. We&apos;re here to help you navigate your legal challenges.
           </p>
         </div>
 
         {/* Contact Info Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {contactInfo.map((item, index) => {
             const Icon = item.icon
             const delay = 300 + index * 100
@@ -1551,23 +1614,7 @@ export default function ContactSection() {
     </section>
   )
 }
-,
-"use client";
-import { useState, useEffect } from "react";
-import {
-  Facebook,
-  Linkedin,
-  Twitter,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  ArrowUp,
-} from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 
-// Footer Component
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -1709,7 +1756,7 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4 text-lg">Contact</h4>
             <ul className="space-y-5">
               <li className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  flex items-center justify-center">
                   <Phone className="w-4 h-4 text-amber-500" />
                 </div>
                 <div>

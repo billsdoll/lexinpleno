@@ -9,6 +9,7 @@ import ServicesSection from "@/components/landing-page/services-section";
 import ContactSection from "@/components/landing-page/contact-section";
 import Footer from "@/components/landing-page/footer";
 import CaseStudies from "@/components/landing-page/case-studies";
+import FAQ from "@/components/landing-page/faq";
 
 export default function Home() {
   return (
@@ -25,8 +26,9 @@ export default function Home() {
         </div> */}
 
         {/* Parallax Background Image */}
+        
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className=" backdrop-blur-md absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
             backgroundImage: "url('/blind_law_lady.jpg')",
           }}
@@ -34,7 +36,7 @@ export default function Home() {
       {/* </div> */}
 
       {/* Actual Page Content */}
-      <div className="backdrop-blur-sm relative z-10">
+      <div className="backdrop-blur-md relative z-10">
         <Header />
         <HeroSection />
         <KeyHighlights />
@@ -44,6 +46,7 @@ export default function Home() {
         {/* <StatsSection /> */}
         <CaseStudies />
         <ServicesSection />
+        <FAQ/>
         <ContactSection />
         <Footer />
       </div>

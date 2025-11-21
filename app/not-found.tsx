@@ -24,7 +24,7 @@ export default function NotFoundPage() {
 
             {/* Badge */}
             <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full mx-auto lg:mx-0 
-              bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm
+              bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm
               transition-all duration-1000 
               ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >

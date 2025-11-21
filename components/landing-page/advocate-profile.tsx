@@ -53,7 +53,7 @@ export default function AdvocateProfile() {
       title: "Educational Excellence",
       description: "B.Com, LL.B, LL.M, M.Phil., Ph.D.",
       gradient: "from-amber-500 to-orange-500",
-      iconBg: "bg-amber-500/10",
+      iconBg: "bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 ",
       delay: "0ms"
     },
     {
@@ -84,7 +84,7 @@ export default function AdvocateProfile() {
             className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm">
               <Star className="w-4 h-4 text-amber-500" />
               <span className="text-sm font-medium text-amber-400">Lead Advocate</span>
             </div>
@@ -118,7 +118,7 @@ export default function AdvocateProfile() {
                 return (
                   <div 
                     key={index}
-                    className={`group relative p-5 rounded-xl bg-background/80 backdrop-blur-sm border border-slate-800 hover:border-slate-700 hover:bg-backgound transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    className={`group relative p-5 rounded-xl bg-slate-900/50 hover:bg-slate-900/80  border-slate-800 /80 backdrop-blur-sm border hover:border-slate-700 hover:bg-backgound transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: isVisible ? item.delay : '0ms' }}
                   >
                     {/* Glow Effect */}
@@ -127,15 +127,15 @@ export default function AdvocateProfile() {
                     <div className="relative flex gap-4 items-start">
                       {/* Icon */}
                       <div className={`shrink-0 w-12 h-12 rounded-lg ${item.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-6 h-6 text-foreground" strokeWidth={2} />
+                        <Icon className="w-6 h-6 text-background" strokeWidth={2} />
                       </div>
                       
                       {/* Content */}
                       <div className="flex-1">
-                        <p className="font-bold text-foreground mb-1 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
+                        <p className="font-bold text-background mb-1 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
                           {item.title}
                         </p>
-                        <p className="text-primary text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                        <p className="text-background/50 text-sm leading-relaxed group-hover:text-background transition-colors duration-300">
                           {item.description}
                         </p>
                       </div>
@@ -204,14 +204,14 @@ export default function AdvocateProfile() {
                 </div>
 
                 {/* Bottom Info Card */}
-                <div className="absolute bottom-6 left-6 right-6 p-5 bg-background/90 backdrop-blur-xl rounded-xl border border-slate-800 shadow-2xl">
+                <div className="absolute bottom-6 left-6 right-6 p-5 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 /90 backdrop-blur-xl rounded-xl border border-slate-800 shadow-2xl">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-linear-to-r from-amber-500 to-orange-500 flex items-center justify-center shrink-0">
-                      <Award className="w-6 h-6 text-foreground" />
+                      <Award className="w-6 h-6 text-background" />
                     </div>
                     <div>
-                      <p className="font-bold text-foreground">Ph.D. in Law</p>
-                      <p className="text-sm text-primary">Supreme Court Certified</p>
+                      <p className="font-bold text-background">Ph.D. in Law</p>
+                      <p className="text-sm text-background/50">Supreme Court Certified</p>
                     </div>
                   </div>
                 </div>
@@ -224,13 +224,13 @@ export default function AdvocateProfile() {
               {/* Floating Certification Badges */}
               <div className="absolute -right-4 top-1/3 space-y-3">
                 <div className="w-16 h-16 rounded-full bg-linear-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-xl border-4 border-slate-950 animate-float">
-                  <span className="text-foreground text-xs font-bold">LL.B</span>
+                  <span className="text-background text-xs font-bold">LL.B</span>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-linear-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-xl border-4 border-slate-950 animate-float" style={{ animationDelay: '1s' }}>
-                  <span className="text-foreground text-xs font-bold">LL.M</span>
+                  <span className="text-background text-xs font-bold">LL.M</span>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-xl border-4 border-slate-950 animate-float" style={{ animationDelay: '2s' }}>
-                  <span className="text-foreground text-xs font-bold">Ph.D</span>
+                  <span className="text-background text-xs font-bold">Ph.D</span>
                 </div>
               </div>
             </div>

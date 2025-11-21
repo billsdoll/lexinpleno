@@ -78,7 +78,7 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             <Mail className="w-4 h-4 text-amber-500" />
             <span className="text-sm font-medium text-amber-400">Contact Us</span>
@@ -113,21 +113,21 @@ export default function ContactSection() {
                 <div className={`absolute inset-0 ${item.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
                 {/* Card */}
-                <div className="relative h-full p-6 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+                <div className="relative h-full p-6 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  backdrop-blur-sm rounded-2xl hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
                   {/* Icon */}
                   <div className="relative mb-4 mx-auto w-fit">
                     <div className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} />
                     <div className={`relative w-14 h-14 rounded-xl bg-gradient-to-r ${item.gradient} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                      <Icon className="w-7 h-7 text-foreground" strokeWidth={2.5} />
+                      <Icon className="w-7 h-7 text-background" strokeWidth={2.5} />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-bold text-foreground mb-2 text-lg">{item.title}</h3>
+                  <h3 className="font-bold text-background mb-2 text-lg">{item.title}</h3>
                   {item.link ? (
                     <a
                       href={item.link}
-                      className="text-primary hover:text-amber-400 transition-colors text-sm whitespace-pre-line block"
+                      className="text-background/80 hover:text-amber-400 transition-colors text-sm whitespace-pre-line block"
                     >
                       {item.content}
                     </a>
