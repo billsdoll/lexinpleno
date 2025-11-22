@@ -1,5 +1,3 @@
-"use client"
-
 import Header from "@/components/landing-page/header"
 import Footer from "@/components/landing-page/footer"
 import Link from "next/link"
@@ -224,18 +222,24 @@ Appeals are challenging. Only a small percentage succeed. Experienced appellate 
   },
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = blogData[params.slug as keyof typeof blogData]
+export default async function BlogPost({ params }: { params: { slug: string } }) {
+    // The params prop is a promise, so we need to await it to get the actual value.
+  const resolvedParams = await params;
+
+  // console.log("Resolved params:", resolvedParams);
+  const slug = resolvedParams.slug;
+  const post = blogData[slug as keyof typeof blogData];
+  // const post = blogData[params.slug as keyof typeof blogData]
 
   if (!post) {
     return (
-      <main className="min-h-screen inset-0 bg-cover bg-center bg-fixed" style={{
+      <main className="min-h-screen backdrop-blur-md inset-0 bg-cover bg-center bg-fixed" style={{
             backgroundImage: "url('/blind_law_lady.jpg')",
           }}>
         <Header />
         <section className="pt-40 backdrop-blur-md pb-20 px-4 text-center">
           <h1 className="text-4xl font-bold text-white">Blog post not found</h1>
-          <Link href="/blog" className="text-amber-500 hover:text-amber-400 mt-4 inline-block">
+          <Link href="/blog" className="text-amber-500 bg-black rounded-lg p-2 hover:text-amber-400 mt-4 inline-block">
             Back to Blog
           </Link>
         </section>
@@ -252,7 +256,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
       <section className="pt-40 backdrop-blur-md pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <Link href="/blog" className="text-amber-500 hover:text-amber-400 mb-4 inline-flex items-center gap-2">
+          <Link href="/blog" className="text-amber-500 bg-black rounded-lg p-2 hover:text-amber-400 mb-4 inline-flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
           </Link>
@@ -275,7 +279,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               <div className="text-white leading-relaxed space-y-4 whitespace-pre-line">{post.content}</div>
             </div>
 
-            <div className="mt-16 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-12 text-center">
+            {/* <div className="mt-16 bg-slate-900/90 border border-amber-500/20 rounded-2xl p-12 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Need Legal Assistance?</h3>
               <p className="text-slate-300 mb-6">Contact us for professional legal guidance</p>
               <Link
@@ -284,7 +288,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               >
                 Schedule Consultation
               </Link>
-            </div>
+            </div> */}
           </article>
         </div>
       </section>

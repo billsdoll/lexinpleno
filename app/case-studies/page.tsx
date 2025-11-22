@@ -72,6 +72,7 @@ export default function CaseStudies() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {caseStudies.map((study) => (
+              
               <Link key={study.id} href={`/case-studies/${study.slug}`}>
                 <div className="group bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:border-amber-500/50 hover:bg-slate-900/80 transition-all duration-300 h-full cursor-pointer">
                   <div className="flex items-start justify-between mb-4">
@@ -93,7 +94,7 @@ export default function CaseStudies() {
             ))}
           </div>
 
-          <div className="mt-16 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-12 text-center">
+          {/* <div className="mt-16 bg-slate-900/90 border border-amber-500/20 rounded-2xl p-12 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Impressed with Our Results?</h3>
             <p className="text-slate-300 mb-6">Let us help you achieve the justice you deserve</p>
             <Link
@@ -102,7 +103,7 @@ export default function CaseStudies() {
             >
               Schedule Consultation
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 

@@ -50,10 +50,8 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "FAQ", href: "/faq" },
     { name: "Testimonials", href: "/testimonials" },
   ]
 
@@ -69,16 +67,11 @@ export default function Footer() {
   return (
     <footer
       id="footer-section"
-      className="relative bg-slate-950 overflow-hidden"
+      className=" bg-slate-950 min-h-fit overflow-hidden"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl" />
-      </div>
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-size-[64px_64px]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-size-[64px_64px]" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}

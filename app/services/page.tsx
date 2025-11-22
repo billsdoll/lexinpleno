@@ -59,7 +59,7 @@ export default function Services() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">
                     {area.name}
                   </h3>
-                  <p className="text-slate-300 mb-6">{area.description}</p>
+                  <p className="text-slate-300 mb-6">{area.description},{area.slug}</p>
                   <div className="flex items-center gap-2 text-amber-500 group-hover:gap-3 transition-all">
                     <span>Learn More</span>
                     <ArrowRight className="w-5 h-5" />
@@ -69,7 +69,7 @@ export default function Services() {
             ))}
           </div>
 
-          <div className="mt-16 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-12 text-center">
+          {/* <div className="mt-16 bg-slate-900/90 border border-amber-500/20 rounded-2xl p-12 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
             <p className="text-slate-300 mb-6">Contact us today for a free consultation</p>
             <Link
@@ -78,7 +78,7 @@ export default function Services() {
             >
               Get Free Consultation
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 

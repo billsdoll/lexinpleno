@@ -63,8 +63,8 @@ export default function NotFoundPage() {
             >
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r 
-                from-amber-500 to-orange-500 text-white font-semibold rounded-lg 
+                className="inline-flex bg-black rounded-lg p-2 items-center gap-2 px-8 py-4 bg-gradient-to-r 
+                from-amber-500 to-orange-500 text-white font-semibold
                 hover:shadow-xl hover:shadow-amber-500/50 hover:scale-105 
                 transition-all duration-300"
               >

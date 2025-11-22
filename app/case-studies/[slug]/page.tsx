@@ -1,4 +1,4 @@
-"use client"
+
 
 import Header from "@/components/landing-page/header"
 import Footer from "@/components/landing-page/footer"
@@ -116,8 +116,14 @@ const caseStudiesData = {
   },
 }
 
-export default function CaseStudyDetail({ params }: { params: { slug: string } }) {
-  const caseData = caseStudiesData[params.slug as keyof typeof caseStudiesData]
+export default async function CaseStudyDetail({ params }: { params: { slug: string } }) {
+    // The params prop is a promise, so we need to await it to get the actual value.
+  const resolvedParams = await params;
+
+  // console.log("Resolved params:", resolvedParams);
+  const slug = resolvedParams.slug;
+  const caseData = caseStudiesData[slug as keyof typeof caseStudiesData];
+  // const caseData = caseStudiesData[params.slug as keyof typeof caseStudiesData]
 
   if (!caseData) {
     return (
@@ -127,7 +133,7 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
         <Header />
         <section className="pt-40 backdrop-blur-md pb-20 px-4 text-center">
           <h1 className="text-4xl font-bold text-white">Case study not found</h1>
-          <Link href="/case-studies" className="text-amber-500 hover:text-amber-400 mt-4 inline-block">
+          <Link href="/case-studies" className="text-amber-500 bg-black rounded-lg p-2 hover:text-amber-400 mt-4 inline-block">
             Back to Case Studies
           </Link>
         </section>
@@ -137,14 +143,14 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
   }
 
   return (
-    <main className="min-h-screen inset-0 bg-cover bg-center bg-fixed" style={{
+    <main className="min-h-screen backdrop-blur-md inset-0 bg-cover bg-center bg-fixed" style={{
             backgroundImage: "url('/blind_law_lady.jpg')",
           }}>
       <Header />
 
       <section className="pt-40 pb-20 backdrop-blur-md px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <Link href="/case-studies" className="text-amber-500 hover:text-amber-400 mb-4 inline-block">
+          <Link href="/case-studies" className="text-amber-500 bg-black rounded-lg p-2 hover:text-amber-400 mb-4 inline-block">
             ← Back to Case Studies
           </Link>
 
@@ -184,7 +190,7 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
               <p className="text-slate-300 leading-relaxed">{caseData.solution}</p>
             </div>
 
-            <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-8">
+            <div className="bg-slate-900/90 border border-amber-500/20 rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">The Outcome</h2>
               <p className="text-slate-300 leading-relaxed mb-6">{caseData.outcome}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -198,7 +204,7 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
             </div>
           </div>
 
-          <div className="mt-16 bg-slate-900/50 border border-slate-800 rounded-2xl p-12 text-center">
+          {/* <div className="mt-16 bg-slate-900/50 border border-slate-800 rounded-2xl p-12 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Need Similar Results?</h3>
             <p className="text-slate-300 mb-6">We're ready to fight for your case</p>
             <Link
@@ -207,7 +213,7 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
             >
               Get Free Consultation
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 

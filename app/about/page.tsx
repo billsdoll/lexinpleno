@@ -77,7 +77,7 @@ export default function About() {
               })}
             </div>
 
-            <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-8 mt-12">
+            <div className="bg-slate-900/90 border border-amber-500/20 rounded-2xl p-8 mt-12">
               <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
               <ul className="space-y-3 text-white">
                 <li className="flex items-start gap-3">

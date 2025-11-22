@@ -155,7 +155,7 @@ export default async function PracticeAreaDetail({ params }: { params: Promise<{
         <Header />
         <section className="pt-40 backdrop-blur-md pb-20 px-4 text-center">
           <h1 className="text-4xl font-bold text-white">Practice area not found</h1>
-          <Link href="/services" className="text-amber-500 hover:text-amber-400 mt-4 inline-block">
+          <Link href="/services" className="text-amber-500 bg-black rounded-lg p-2 hover:text-amber-400 mt-4 inline-block">
             Back to Services
           </Link>
         </section>
@@ -172,7 +172,7 @@ export default async function PracticeAreaDetail({ params }: { params: Promise<{
 
       <section className="pt-40 backdrop-blur-md pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <Link href="/services" className="text-amber-500 hover:text-amber-400 mb-4 inline-block">
+          <Link href="/services" className="text-amber-500  bg-black rounded-lg p-2 hover:text-amber-400 mb-4 inline-block">
             ← Back to Services
           </Link>
 
@@ -193,7 +193,7 @@ export default async function PracticeAreaDetail({ params }: { params: Promise<{
             <div className="text-slate-300 whitespace-pre-line leading-relaxed">{data.content}</div>
           </div>
 
-          <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-12 text-center">
+          {/* <div className="bg-slate-900/90 border border-amber-500/20 rounded-2xl p-12 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Need Legal Help?</h3>
             <p className="text-slate-300 mb-6">Contact us for a free consultation</p>
             <Link
@@ -202,7 +202,7 @@ export default async function PracticeAreaDetail({ params }: { params: Promise<{
             >
               Get Free Consultation
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
