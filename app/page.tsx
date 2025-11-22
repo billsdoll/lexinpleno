@@ -43,7 +43,6 @@ export default function Home() {
         <AboutSection />
         <AdvocateProfile />
         <TeamSection />
-        {/* <StatsSection /> */}
         <CaseStudies />
         <ServicesSection />
         <FAQ/>

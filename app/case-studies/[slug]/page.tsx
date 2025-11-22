@@ -196,7 +196,7 @@ export default async function CaseStudyDetail({ params }: { params: { slug: stri
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {caseData.highlights.map((highlight, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-amber-500 shrink-0 mt-1" />
                     <p className="text-slate-300">{highlight}</p>
                   </div>
                 ))}
@@ -209,7 +209,7 @@ export default async function CaseStudyDetail({ params }: { params: { slug: stri
             <p className="text-slate-300 mb-6">We're ready to fight for your case</p>
             <Link
               href="/contact"
-              className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+              className="inline-block bg-linear-to-r from-amber-500 to-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
             >
               Get Free Consultation
             </Link>

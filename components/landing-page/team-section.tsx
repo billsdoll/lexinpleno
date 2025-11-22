@@ -44,7 +44,7 @@ export default function TeamSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-8000 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             <Users className="w-4 h-4 text-amber-500" />
             <span className="text-sm font-medium text-amber-400">Our Legal Team</span>
@@ -79,7 +79,7 @@ export default function TeamSection() {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Glow Effect */}
-                {/* <div className={`absolute inset-0 bg-gradient-to-r ${associate.gradient} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-opacity duration-500`} /> */}
+                {/* <div className={`absolute inset-0 bg-linear-to-r ${associate.gradient} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-opacity duration-500`} /> */}
                 
                 {/* Card */}
                 <div className="relative p-6 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center h-full flex flex-col">
@@ -87,11 +87,11 @@ export default function TeamSection() {
                   <div className="relative mb-5 mx-auto">
                     {/* Rotating Ring */}
                     {/* <div className={`absolute inset-0 rounded-full transition-transform duration-700 ${isHovered ? 'rotate-180' : 'rotate-0'}`}>
-                      <div className={`w-24 h-24 rounded-full border-4 border-dashed bg-gradient-to-r ${associate.gradient} opacity-20`} />
+                      <div className={`w-24 h-24 rounded-full border-4 border-dashed bg-linear-to-r ${associate.gradient} opacity-20`} />
                     </div> */}
                     
                     {/* Inner Glow */}
-                    {/* <div className={`absolute inset-0 bg-gradient-to-r ${associate.gradient} rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500`} /> */}
+                    {/* <div className={`absolute inset-0 bg-linear-to-r ${associate.gradient} rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500`} /> */}
                     
                     {/* Avatar Circle */}
                     <div className={`relative w-24 h-24 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg`}>
@@ -110,7 +110,7 @@ export default function TeamSection() {
                   </h3>
                   
                   {/* Specialization */}
-                  <p className={`text-sm font-medium bg-gradient-to-r ${associate.gradient} bg-clip-text text-transparent mb-3`}>
+                  <p className={`text-sm font-medium bg-linear-to-r ${associate.gradient} bg-clip-text text-transparent mb-3`}>
                     {associate.specialization}
                   </p>
                   
@@ -122,12 +122,12 @@ export default function TeamSection() {
                   </div>
 
                   {/* Bottom Accent Line */}
-                  {/* <div className={`absolute bottom-1 left-0 right-0 h-1 bg-gradient-to-r ${associate.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} /> */}
+                  {/* <div className={`absolute bottom-1 left-0 right-0 h-1 bg-linear-to-r ${associate.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} /> */}
                   
                   {/* Corner Dot */}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${associate.gradient} animate-ping`} />
-                    <div className={`absolute top-0 w-2 h-2 rounded-full bg-gradient-to-r ${associate.gradient}`} />
+                    <div className={`w-2 h-2 rounded-full bg-linear-to-r ${associate.gradient} animate-ping`} />
+                    <div className={`absolute top-0 w-2 h-2 rounded-full bg-linear-to-r ${associate.gradient}`} />
                   </div>
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function TeamSection() {
         >
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-8 py-8 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800">
             <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-linear-to-r from-amber-500 to-orange-500 flex items-center justify-center">
                 <Users className="w-7 h-7 text-foreground" />
               </div>
               <div className="text-left">
@@ -153,7 +153,7 @@ export default function TeamSection() {
             <div className="hidden md:block w-px h-16 bg-slate-800" />
             
             <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-linear-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
                 <Scale className="w-7 h-7 text-foreground" />
               </div>
               <div className="text-left">
@@ -165,7 +165,7 @@ export default function TeamSection() {
             <div className="hidden md:block w-px h-16 bg-slate-800" />
             
             <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center">
                 <Award className="w-7 h-7 text-foreground" />
               </div>
               <div className="text-left">

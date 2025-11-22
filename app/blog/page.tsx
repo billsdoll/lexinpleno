@@ -72,7 +72,7 @@ export default function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`}>
-                <div className="group bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/50 hover:bg-slate-900/80 transition-all duration-300 h-full cursor-pointer">
+                <div className="group bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/50 transition-all duration-300 h-full cursor-pointer">
                   <div className="flex items-center gap-2 text-slate-400 text-sm mb-3">
                     <Calendar className="w-4 h-4" />
                     <span>{post.date}</span>

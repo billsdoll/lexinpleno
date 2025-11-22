@@ -85,7 +85,7 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  0 backdrop-blur-sm mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             <Mail className="w-4 h-4 text-amber-500" />
             <span className="text-sm font-medium text-amber-400">Contact Us</span>
@@ -123,8 +123,8 @@ export default function ContactSection() {
                 <div className="relative h-full p-6 bg-background/80 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
                   {/* Icon */}
                   <div className="relative mb-4 mx-auto w-fit">
-                    <div className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} />
-                    <div className={`relative w-14 h-14 rounded-xl bg-gradient-to-r ${item.gradient} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                    <div className={`absolute inset-0 bg-linear-to-r ${item.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} />
+                    <div className={`relative w-14 h-14 rounded-xl bg-linear-to-r ${item.gradient} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                       <Icon className="w-7 h-7 text-foreground" strokeWidth={2.5} />
                     </div>
                   </div>
@@ -143,7 +143,7 @@ export default function ContactSection() {
                   )}
 
                   {/* Bottom Accent */}
-                  {/* <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} /> */}
+                  {/* <div className={`absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} /> */}
                 </div>
               </div>
             )
@@ -162,7 +162,7 @@ export default function ContactSection() {
             <div className="relative">
               {/* Form Header */}
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-r from-amber-500 to-orange-500 flex items-center justify-center">
                   <Send className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
@@ -261,7 +261,7 @@ export default function ContactSection() {
                 {/* Submit Button */}
                 <Button
                   onClick={handleSubmit}
-                  className="group w-full px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-amber-500/50 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2"
+                  className="group w-full px-8 py-4 bg-linear-to-r from-amber-500 to-orange-500 text-foreground font-semibold rounded-lg hover:shadow-xl hover:shadow-amber-500/50 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2"
                 >
                   <span>Request Consultation</span>
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

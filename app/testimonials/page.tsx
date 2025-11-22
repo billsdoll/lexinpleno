@@ -84,7 +84,7 @@ export default function Testimonials() {
             <p className="text-slate-300 mb-6">Let us fight for your justice and protect your rights</p>
             <a
               href="tel:+919794717544"
-              className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+              className="inline-block bg-linear-to-r from-amber-500 to-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
             >
               Get Free Consultation
             </a>

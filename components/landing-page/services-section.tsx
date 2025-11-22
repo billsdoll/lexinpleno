@@ -102,7 +102,7 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm mb-6 transition-all duration-1000 ${
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 backdrop-blur-sm mb-6 transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -162,11 +162,11 @@ export default function ServicesSection() {
                 {/* <div className={`absolute inset-0 ${service.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
 
                 {/* Card */}
-                <div className="relative h-full p-8 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                <div className="relative h-full p-8 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  backdrop-blur-sm rounded-2xl hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
                   {/* Icon Container */}
                   <div className="relative mb-6">
                     {/* Icon Background Glow */}
-                    {/* <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} /> */}
+                    {/* <div className={`absolute inset-0 bg-linear-to-r ${service.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} /> */}
 
                     {/* Icon */}
                     <div
@@ -184,7 +184,7 @@ export default function ServicesSection() {
                     <h3
                       className="text-2xl text-background font-bold mb-3 
              group-hover:text-transparent 
-             group-hover:bg-gradient-to-r 
+             group-hover:bg-linear-to-r 
              group-hover:from-amber-400 
              group-hover:to-orange-500 
              group-hover:bg-clip-text 
@@ -221,7 +221,7 @@ export default function ServicesSection() {
                   </Button> */}
 
                   {/* Decorative Elements */}
-                  {/* <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl`} /> */}
+                  {/* <div className={`absolute top-0 left-0 right-0 h-1 bg-linear-to-r ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl`} /> */}
 
                   {/* Corner Accent */}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -251,7 +251,7 @@ export default function ServicesSection() {
         {/* <div 
           className={`mt-20 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-          <div className="relative p-12 bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl border border-slate-800 overflow-hidden">
+          <div className="relative p-12 bg-linear-to-r from-slate-900 to-slate-800 rounded-3xl border border-slate-800 overflow-hidden">
             // Background Pattern 
             <div className="absolute inset-0 opacity-5">
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_25%,rgba(255,255,255,.05)_50%,transparent_50%,transparent_75%,rgba(255,255,255,.05)_75%,rgba(255,255,255,.05))] bg-[length:60px_60px]" />
@@ -260,7 +260,7 @@ export default function ServicesSection() {
             <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-3xl font-bold text-background mb-3">
-                  Need Legal <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Consultation?</span>
+                  Need Legal <span className="bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Consultation?</span>
                 </h3>
                 <p className="text-background/40 text-lg">
                   Our expert team is ready to help you with any legal matter. Schedule your consultation .
@@ -268,7 +268,7 @@ export default function ServicesSection() {
               </div>
               
               <Link href={"#contact"} >
-              <Button className="group/cta px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-background font-semibold rounded-lg hover:shadow-xl hover:shadow-amber-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-2 whitespace-nowrap">
+              <Button className="group/cta px-8 py-4 bg-linear-to-r from-amber-500 to-orange-500 text-background font-semibold rounded-lg hover:shadow-xl hover:shadow-amber-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-2 whitespace-nowrap">
                 Contact Us Now
                 <ArrowRight className="w-5 h-5 group-hover/cta:translate-x-1 transition-transform" />
               </Button>

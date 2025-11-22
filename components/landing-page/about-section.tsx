@@ -109,7 +109,7 @@ export default function AboutSection() {
             className={`space-y-8 order-1 lg:order-2 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 backdrop-blur-sm">
               <Scale className="w-4 h-4 text-amber-500" />
               <span className="text-sm font-medium text-amber-400">About Our Firm</span>
             </div>
@@ -164,7 +164,7 @@ export default function AboutSection() {
                       </div>
 
                       {/* Active gradiant line */}
-                      {/* <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${item.gradient} rounded-r transition-all duration-500 ${
+                      {/* <div className={`absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b ${item.gradient} rounded-r transition-all duration-500 ${
                         isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-50'
                       }`} /> */}
                     </div>

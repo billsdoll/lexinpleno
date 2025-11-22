@@ -21,7 +21,7 @@ export default function NotFoundPage() {
           <div className="lg:col-span-7 space-y-8">
             
             {/* Badge */}
-            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  border border-amber-500/20 backdrop-blur-sm transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 backdrop-blur-sm transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <Scale className="w-4 h-4 text-amber-500" />
               <span className="text-sm font-medium text-amber-500 dark:text-amber-400">
                 Page Not Found
@@ -46,7 +46,7 @@ export default function NotFoundPage() {
             <div className={`transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <Link
                 href="/"
-                className="inline-flex items-center bg-black rounded-lg p-2  gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold hover:shadow-xl hover:shadow-amber-500/50 hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center bg-black rounded-lg p-2  gap-2 px-8 py-4 bg-linear-to-r from-amber-500 to-orange-500 text-white font-semibold hover:shadow-xl hover:shadow-amber-500/50 hover:scale-105 transition-all duration-300"
               >
                 <ArrowLeft className="w-5 h-5" />
                 Back to Home

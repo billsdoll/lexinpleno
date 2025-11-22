@@ -74,7 +74,7 @@ export default function Services() {
             <p className="text-slate-300 mb-6">Contact us today for a free consultation</p>
             <Link
               href="/contact"
-              className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
+              className="inline-block bg-linear-to-r from-amber-500 to-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transition-all"
             >
               Get Free Consultation
             </Link>
