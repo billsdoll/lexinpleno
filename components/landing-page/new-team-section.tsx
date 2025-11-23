@@ -6,76 +6,76 @@ import { Badge } from "@/components/ui/badge"
 
 const team = [
   {
-    name: "Shakeel S",
+    name: "Advocate Sheela S",
     specialization: "Criminal Law",
     gradient: "from-amber-500 to-orange-500",
-    image: "/lawyers-image/lawyer-11.jpg",
+    image: "/lawyers-image/advocate-sheela.jpeg",
   },
   {
-    name: "Hitesh Kiran T",
+    name: "Advocate Arjun Dawar",
     specialization: "Civil Litigation",
     gradient: "from-blue-500 to-cyan-500",
-    image: "/lawyers-image/lawyer-2.jpg",
+    image: "/lawyers-image/arjun-dawar.jpeg",
   },
   {
-    name: "Vishal Sharma",
+    name: "Advocate Jijo Thomas",
     specialization: "Corporate Law",
     gradient: "from-purple-500 to-pink-500",
-    image: "/lawyers-image/lawyer-13.jpg",
+    image: "/lawyers-image/jijo-thomas.jpeg",
   },
   {
-    name: "Taseef Majeed",
+    name: "Advocate Praveen Kharat",
     specialization: "Family Law",
     gradient: "from-green-500 to-emerald-500",
-    image: "/lawyers-image/lawyer-17.jpg",
+    image: "/lawyers-image/praveen-kharat.jpeg",
   },
   {
-    name: "Aadil Bensaleh",
+    name: "Advocate Sunil Sontake",
     specialization: "Tax Law",
     gradient: "from-red-500 to-rose-500",
-    image: "/lawyers-image/lawyer-5.jpg",
+    image: "/lawyers-image/sunil-sontake.jpeg",
   },
   {
-    name: "JRF Thomas",
+    name: "Advocate Titus Philip",
     specialization: "Property Law",
     gradient: "from-indigo-500 to-purple-500",
-    image: "/lawyers-image/lawyer-14.jpg",
+    image: "/lawyers-image/titus-philip.jpeg",
   },
   {
-    name: "Hitesh Bharati",
+    name: "Advocate Vaishali Sharma",
     specialization: "Labour Law",
     gradient: "from-yellow-500 to-amber-500",
-    image: "/lawyers-image/lawyer-15.jpg",
+    image: "/lawyers-image/vaishali-sharma.jpeg",
   },
   {
-    name: "Aijaz Omar",
+    name: "Advocate Hitesh Khatri",
     specialization: "Consumer Law",
     gradient: "from-teal-500 to-cyan-500",
-    image: "/lawyers-image/lawyer-8.jpg",
+    image: "/lawyers-image/user.jpeg",
   },
   {
-    name: "Pankesh Bhai",
+    name: "Advocate Pankesh Bhai",
     specialization: "Banking Law",
     gradient: "from-orange-500 to-red-500",
-    image: "/lawyers-image/lawyer-9.jpg",
+    image: "/lawyers-image/user.jpeg",
   },
   {
-    name: "Robert Bhagat",
+    name: "Advocate Robert Bhagat",
     specialization: "IP Law",
     gradient: "from-violet-500 to-purple-500",
-    image: "/lawyers-image/lawyer-16.jpg",
+    image: "/lawyers-image/user.jpeg",
   },
   {
-    name: "Poonam Mehta",
+    name: "Advocate Poonam Mehta",
     specialization: "Immigration Law",
     gradient: "from-pink-500 to-rose-500",
-    image: "/lawyers-image/lawyer-3-w.jpg",
+    image: "/lawyers-image/user.jpeg",
   },
   {
-    name: "Ranjeet Bhagat",
+    name: "Advocate Ranjeet Bhagat",
     specialization: "Constitutional Law",
     gradient: "from-cyan-500 to-blue-500",
-    image: "/lawyers-image/lawyer-12.jpg",
+    image: "/lawyers-image/user.jpeg",
   },
 ];
 
@@ -150,16 +150,16 @@ export default function Team() {
               >
                 <div className={`h-40 `}></div>
 
-                <div className="p-6 bg-black/40 my-rounded-bottom">
-                  <h3 className="group bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                <div className="p-6 bg-black/60 my-rounded-bottom">
+                  <h4 className="group bg-white border-b bg-clip-text text-transparent">
                     {member.name}
-                  </h3>
+                  </h4>
 
-                  <div className="pt-4 border-t border-border">
+                  {/* <div className="pt-4 border-t border-border">
                     <Badge className="text-sm bg-black/70 font-semibold mb-4">
                       {member.specialization}
                     </Badge>
-                  </div>
+                  </div> */}
                 </div>
               </Card>
             </div>
