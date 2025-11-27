@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20"
+      className="backdrop-blur-md relative min-h-screen flex items-center overflow-hidden pt-20"
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"

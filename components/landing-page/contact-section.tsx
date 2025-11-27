@@ -72,7 +72,7 @@ export default function ContactSection() {
   ]
 
   return (
-    <section id="contact-section" className="relative min-h-screen flex items-center overflow-hidden bg-transparent">
+    <section id="contact-section" className="backdrop-blur-md relative min-h-screen flex items-center overflow-hidden bg-transparent">
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

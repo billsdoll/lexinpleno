@@ -112,7 +112,7 @@ export default function Team() {
   }, [isPaused]);
 
   return (
-    <section id="team" className="py-20 min-h-screen ">
+    <section id="team" className="backdrop-blur-md py-20 min-h-screen ">
       <div className=" px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">

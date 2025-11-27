@@ -96,7 +96,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services-section"
-      className="relative min-h-screen flex mt-10  items-center overflow-hidden bg-transparent"
+      className="relative min-h-screen flex mt-10 backdrop-blur-md items-center overflow-hidden bg-transparent"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

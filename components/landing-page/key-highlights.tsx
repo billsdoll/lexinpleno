@@ -51,7 +51,7 @@ export default function KeyHighlights() {
   return (
     <section 
       id="highlights-section"
-      className="relative min-h-screen mt-20 mb-20 flex items-center overflow-hidden bg-transparent"
+      className="backdrop-blur-md relative min-h-screen mt-20 mb-20 flex items-center overflow-hidden bg-transparent"
     >
     
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
