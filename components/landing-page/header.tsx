@@ -50,7 +50,7 @@ export default function Header() {
             >
               <Phone className="w-4 h-4 text-amber-500 group-hover:rotate-12 transition-transform" />
               <span className="text-lg text-foreground transition-colors">
-                +91 9794 717544
+                +91 79996 32639
               </span>
             </a>
           </nav>
@@ -85,7 +85,7 @@ export default function Header() {
               className="flex items-center gap-2 px-4 py-3 rounded-lg bg-primary/50 border border-slate-800 hover:border-amber-500/50 transition-all"
             >
               <Phone className="w-4 h-4 text-amber-500" />
-              <span className="text-sm text-slate-300">+91 9794 717544</span>
+              <span className="text-sm text-slate-300">+91 79996 32639</span>
             </a>
           </nav>
         )}
@@ -141,7 +141,7 @@ export default function Header() {
 //             >
 //               <Phone className="w-4 h-4 text-amber-500 group-hover:rotate-12 transition-transform" />
 //               <span className="text-lg text-foreground transition-colors">
-//                 +91 9794 717544
+//                 +91 79996 32639
 //               </span>
 //             </a>
 //           </div>
@@ -168,7 +168,7 @@ export default function Header() {
 //               className="flex items-center gap-2 px-4 py-3 rounded-lg bg-primary/50 border border-slate-800 hover:border-amber-500/50 transition-all"
 //             >
 //               <Phone className="w-4 h-4 text-amber-500" />
-//               <span className="text-sm text-slate-300">+91 9794 717544</span>
+//               <span className="text-sm text-slate-300">+91 79996 32639</span>
 //             </a>
 //           </nav>
 //         )}

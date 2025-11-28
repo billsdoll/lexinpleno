@@ -32,7 +32,7 @@ export default function KeyHighlights() {
     },
     {
       icon: CheckCircle,
-      title: "Case Dismissed",
+      title: "Case disposed",
       description: "Proven track record of successful case dismissals and favorable verdicts",
       gradient: "from-blue-500 to-cyan-500",
       bgGlow: "bg-blue-500/20",

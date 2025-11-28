@@ -10,7 +10,7 @@ export default function Testimonials() {
       name: "Rajesh Kumar",
       title: "Criminal Case",
       rating: 5,
-      text: "Dr. Manshore defended me brilliantly. The charges against me were completely dismissed. His expertise and dedication were incredible. I highly recommend his services.",
+      text: "Dr. Manshore defended me brilliantly. The charges against me were completely disposed. His expertise and dedication were incredible. I highly recommend his services.",
     },
     {
       name: "Priya Sharma",

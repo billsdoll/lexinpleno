@@ -56,7 +56,7 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 9794 717544",
+      content: "+91 79996 32639",
       link: "tel:+919794717544",
       gradient: "from-blue-500 to-cyan-500",
       bgGlow: "bg-blue-500/20"
