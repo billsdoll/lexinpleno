@@ -9,7 +9,7 @@ const practiceAreaData = {
     name: "Criminal Law",
     description: "Expert defense and prosecution in criminal matters",
     content: `Dr. Umesh Manshore specializes in providing comprehensive criminal defense services. With decades of experience in the criminal justice system, we understand the complexities of criminal law and the severe consequences a conviction can have on your life.
-
+m
 Our criminal law services include:
 - Felony and misdemeanor defense
 - DUI/DWI representation

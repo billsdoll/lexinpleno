@@ -9,6 +9,7 @@ import {
   Gavel,
   ArrowRight,
   CheckCircle,
+  Link2,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -37,6 +38,7 @@ export default function ServicesSection() {
     {
       icon: Briefcase,
       title: "Business Law",
+      slug: "business-law",
       description:
         "Expert guidance on corporate matters, contracts, and business litigation",
       gradient: "from-amber-500 to-orange-500",
@@ -50,6 +52,7 @@ export default function ServicesSection() {
     {
       icon: Users,
       title: "Family Law",
+      slug: "family-law",
       description:
         "Sensitive representation in divorce, custody, and family matters",
       gradient: "from-blue-500 to-cyan-500",
@@ -59,6 +62,7 @@ export default function ServicesSection() {
     {
       icon: Scale,
       title: "Criminal Law",
+      slug: "criminal-law",
       description:
         "Aggressive defense strategies for criminal charges and prosecution",
       gradient: "from-red-500 to-rose-500",
@@ -68,6 +72,7 @@ export default function ServicesSection() {
     {
       icon: Home,
       title: "Real Estate Law",
+      slug: "real-estate-law",
       description:
         "Comprehensive legal services for property transactions and disputes",
       gradient: "from-green-500 to-emerald-500",
@@ -77,6 +82,7 @@ export default function ServicesSection() {
     {
       icon: Heart,
       title: "Personal Injury",
+      slug: "personal-injury",
       description: "Maximum compensation recovery for injuries and damages",
       gradient: "from-purple-500 to-pink-500",
       bgGlow: "bg-purple-500/20",
@@ -85,6 +91,7 @@ export default function ServicesSection() {
     {
       icon: Gavel,
       title: "Judicial Law",
+      slug: "judicial-law",
       description:
         "Appellate representation and complex constitutional matters",
       gradient: "from-indigo-500 to-purple-500",
@@ -147,102 +154,106 @@ export default function ServicesSection() {
             const delay = 300 + index * 100;
 
             return (
-              <div
-                key={index}
-                className={`group relative transition-all mb-10 duration-1000 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-12"
-                }`}
-                style={{ transitionDelay: `${delay}ms` }}
-                onMouseEnter={() => setActiveIndex(index)}
-                onMouseLeave={() => setActiveIndex(null)}
-              >
-                {/* Outer Glow */}
-                {/* <div className={`absolute inset-0 ${service.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
+              <Link href={`/practice-areas/${service.slug}`}>
+                <div
+                  key={index}
+                  className={`group relative transition-all mb-10 duration-1000 ${
+                    isVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-12"
+                  }`}
+                  style={{ transitionDelay: `${delay}ms` }}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onMouseLeave={() => setActiveIndex(null)}
+                >
+                  {/* Outer Glow */}
+                  {/* <div className={`absolute inset-0 ${service.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
 
-                {/* Card */}
-                <div className="relative h-full p-8 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  backdrop-blur-sm rounded-2xl hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
-                  {/* Icon Container */}
-                  <div className="relative mb-6">
-                    {/* Icon Background Glow */}
-                    {/* <div className={`absolute inset-0 bg-linear-to-r ${service.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} /> */}
+                  {/* Card */}
+                  <div className="relative h-full p-8 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800  backdrop-blur-sm rounded-2xl hover:border-slate-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col">
+                    {/* Icon Container */}
+                    <div className="relative mb-6">
+                      {/* Icon Background Glow */}
+                      {/* <div className={`absolute inset-0 bg-linear-to-r ${service.gradient} rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`} /> */}
 
-                    {/* Icon */}
-                    <div
-                      className={`relative w-16 h-16 rounded-xl bg-transparent flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border shadow-xl`}
-                    >
-                      <Icon
-                        className="w-8 h-8 text-background"
-                        strokeWidth={2.5}
-                      />
+                      {/* Icon */}
+                      <div
+                        className={`relative w-16 h-16 rounded-xl bg-transparent flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border shadow-xl`}
+                      >
+                        <Icon
+                          className="w-8 h-8 text-background"
+                          strokeWidth={2.5}
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3
-                      className="text-2xl text-background font-bold mb-3 
-             group-hover:text-transparent 
-             group-hover:bg-linear-to-r 
-             group-hover:from-amber-400 
-             group-hover:to-orange-500 
-             group-hover:bg-clip-text 
-             transition-all duration-300"
-                    >
-                      {service.title}
-                    </h3>
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h3
+                        className="text-2xl text-background font-bold mb-3 
+                      group-hover:text-transparent 
+                      group-hover:bg-linear-to-r 
+                      group-hover:from-amber-400 
+                      group-hover:to-orange-500 
+                      group-hover:bg-clip-text 
+                      transition-all duration-300"
+                      >
+                        {service.title}
+                      </h3>
 
-                    <p className="text-background/40 leading-relaxed mb-6 group-hover:text-background/40 transition-colors duration-300">
-                      {service.description}
-                    </p>
+                      <p className="text-background/40 leading-relaxed mb-6 group-hover:text-background/40 transition-colors duration-300">
+                        {service.description}
+                      </p>
 
-                    {/* Features List */}
-                    <div
-                      className={`space-y-2 mb-6 overflow-hidden transition-all duration-500 ${
-                        isActive ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-                      }`}
-                    >
-                      {service.features.map((feature, i) => (
-                        <div key={i} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-amber-500 shrink-0" />
-                          <span className="text-sm text-background/40">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
+                      {/* Features List */}
+                      <div
+                        className={`space-y-2 mb-6 overflow-hidden transition-all duration-500 ${
+                          isActive
+                            ? "max-h-40 opacity-100"
+                            : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        {service.features.map((feature, i) => (
+                          <div key={i} className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-amber-500 shrink-0" />
+                            <span className="text-sm text-background/40">
+                              {feature}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* CTA Button */}
-                  {/* <Button className={`group/btn flex items-center justify-between w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                    {/* CTA Button */}
+                    {/* <Button className={`group/btn flex items-center justify-between w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                     <span className="text-sm font-medium text-background/40 group-hover/btn:text-background transition-colors">Learn More</span>
                     <ArrowRight className="w-4 h-4 text-amber-500 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button> */}
+                    </Button> */}
 
-                  {/* Decorative Elements */}
-                  {/* <div className={`absolute top-0 left-0 right-0 h-1 bg-linear-to-r ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl`} /> */}
+                    {/* Decorative Elements */}
+                    {/* <div className={`absolute top-0 left-0 right-0 h-1 bg-linear-to-r ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl`} /> */}
 
-                  {/* Corner Accent */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div
-                      className={`w-2 h-2 rounded-full bg-linear-to-r ${service.gradient} animate-ping`}
-                    />
-                    <div
-                      className={`absolute top-0 w-2 h-2 rounded-full bg-linear-to-r ${service.gradient}`}
-                    />
-                  </div>
+                    {/* Corner Accent */}
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div
+                        className={`w-2 h-2 rounded-full bg-linear-to-r ${service.gradient} animate-ping`}
+                      />
+                      <div
+                        className={`absolute top-0 w-2 h-2 rounded-full bg-linear-to-r ${service.gradient}`}
+                      />
+                    </div>
 
-                  {/* Number Badge */}
-                  <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-primary border-2 border-slate-700 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <span
-                      className={`text-sm font-bold bg-linear-to-r ${service.gradient} bg-clip-text text-transparent`}
-                    >
-                      0{index + 1}
-                    </span>
+                    {/* Number Badge */}
+                    <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-primary border-2 border-slate-700 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <span
+                        className={`text-sm font-bold bg-linear-to-r ${service.gradient} bg-clip-text text-transparent`}
+                      >
+                        0{index + 1}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
